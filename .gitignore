@@ -1,4 +1,12 @@
-﻿# Sass #
+﻿# Project Planning Files #
+
+.planning
+.planning/*
+
+# End Project Planning Files #
+
+# Sass #
+
 .sass-cache
 .sass-cache/*
 
