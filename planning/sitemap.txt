@@ -1,0 +1,11 @@
+﻿Sit, Stay & Play! Site Map
+==========================
+
+Pages
+-----
+
+index.html
+    services.html
+    photos.html
+    contact.html
+    foster.html

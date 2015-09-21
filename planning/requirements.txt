@@ -1,0 +1,67 @@
+﻿Sit, Stay & Play! Requirements Analysis
+=======================================
+
+The Business
+------------
+
+    Sit, Stay & Play is a small, locally owned animal care service
+specializing in dogs. They offer day care, boarding, grooming, walking, and private sitting
+services. For animals staying on premise, they offer a free-range environment
+in which dogs are usually not confined to a crate. The business takes pride in
+keeping a low volume of dogs in order to increase pet safety. In kepping with
+this theme, Sit, Stay & Play does not permit animals who fail a behavioral
+test or who are not up to date on their shots to participate in the day care
+program.
+
+    The business participates in the community by caring for foster dogs and
+helping to find permanent homes for them.
+
+
+Target Audience
+---------------
+
+    Because of the broad array of services offered, any pet owner with more than a
+passing interest in the welfare of their animal can find a fair provider in
+Sit, Stay & Play. Specific customer cases include:
+
+- Pet owners who don't want to leave their animals alone while away from home
+- Pet owners requiring grooming services
+- Pet owners unable to give their animals exercise due to age or disability
+
+
+Client
+------
+
+    I am not informal contact with the owners of Sit, Stay & Play, so there
+are no plans at this point to replace their existing site with my own. I
+can, however, easily reach the owners if the project reaches a point of
+maturity that would make this feasible.
+
+
+Goals
+-----
+    As Sit, Stay & Play is not an official stakeholder in the project, I only
+have my own goals for the site:
+
+- Content
+    - Overview is wordy and fails to draw focus
+    - Services are wordy and haphazardly organized
+    - Printable services PDFs are buried and invisible until hovered
+    - Random boxes displaying accolades are uneven and distracting
+    - Contact information needs to be grouped in a single, prominent location
+    
+- Layout
+    - Content needs to be widened to consume more screen space where available
+    - Mobile layout needs to conform more closely to the desktop layout
+    - Top-oriented nav is ideal for such specific subject matter
+    - Color scheme needs to be subdued and unified to increase professionalism
+    - Introduce more white space, especially in text, to increase user comfort
+
+- Interactivity
+    - Replace the static list of photos with an attractive gallery
+    - Introduce a simple contact form to allow written communication
+    - Introduce social media hooks to improve community involvement
+    - Replace MapQuest widget with more ubiquitous Google Map. 
+
+- Performance
+   - The site is inexplicably slow. I feel confident I can improve load times
