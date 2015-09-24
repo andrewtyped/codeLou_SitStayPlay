@@ -1,0 +1,22 @@
+{
+  "name": "sitstayplay",
+  "version": "0.0.1",
+  "description": "re-design of sit, stay & play website",
+  "main": "app/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewtyped/codeLou_SitStayPlay.git"
+  },
+  "author": "Andrew S. Barger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewtyped/codeLou_SitStayPlay/issues"
+  },
+  "homepage": "https://github.com/andrewtyped/codeLou_SitStayPlay#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
