@@ -53,3 +53,4 @@
     //register tasks
     grunt.registerTask('build', ['uglify:build','sass:build']);
     grunt.registerTask('dev', ['uglify:dev','sass:dev']);
+}
