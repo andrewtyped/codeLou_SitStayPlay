@@ -12,7 +12,7 @@
     });
 
     //load plugins
-    grunt.loadNpmTasks( );
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     //register tasks
-    grunt.registerTask('default', []);
+    grunt.registerTask('default', ['uglify:build']);
