@@ -22,9 +22,20 @@
         watch : {
             js : {
                 files : ['app/components/js/*.js'],
-                tasks : ['uglify:dev']
+                tasks : ['uglify:dev','sass:dev']
             }
-        }
+        },
+        sass : {
+            build : {
+                files : {
+                    'app/app.css' : 'app/components/scss/main.scss'
+                }
+            },
+            dev : {
+                files : {
+                    'app/app.css' : 'app/components/scss/main.scss'
+                }
+            },
     });
 
     //load plugins
@@ -32,7 +43,8 @@
 
     //run grunt watch to start watching
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
     //register tasks
-    grunt.registerTask('build', ['uglify:build']);
-    grunt.registerTask('dev', ['uglify:dev']);
+    grunt.registerTask('build', ['uglify:build','sass:build']);
+    grunt.registerTask('dev', ['uglify:dev','sass:dev']);
