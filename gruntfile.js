@@ -36,6 +36,7 @@
                     'app/app.css' : 'app/components/scss/main.scss'
                 }
             },
+        }
     });
 
     //load plugins
