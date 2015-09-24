@@ -18,11 +18,20 @@
                 src : 'app/components/js/*.js',
                 dest : 'app/app.min.js'
             }
+        },
+        watch : {
+            js : {
+                files : ['app/components/js/*.js'],
+                tasks : ['uglify:dev']
+            }
         }
     });
 
     //load plugins
     grunt.loadNpmTasks('grunt-contrib-uglify');
+
+    //run grunt watch to start watching
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     //register tasks
     grunt.registerTask('build', ['uglify:build']);
