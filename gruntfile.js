@@ -22,7 +22,11 @@
         watch : {
             js : {
                 files : ['app/components/js/*.js'],
-                tasks : ['uglify:dev','sass:dev']
+                tasks : ['uglify:dev']
+            },
+            css: {
+                files : ['app/components/scss/*.scss'],
+                task: ['sass:dev']
             }
         },
         sass : {
