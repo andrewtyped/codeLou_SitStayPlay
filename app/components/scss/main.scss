@@ -1,1 +1,22 @@
-﻿
+﻿@import '_reset';
+
+.page {
+	&::after {
+		content:"";
+		clear:both;
+	}
+	
+	.nav-desktop {
+		background:tomato;
+		
+		width:50%;
+		float:left;
+		padding-top:12px;
+	}
+	
+	.content {
+		background:blue;
+		width:50%;
+		float:right;
+	}
+}
