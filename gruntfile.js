@@ -26,7 +26,7 @@
             },
             css: {
                 files : ['app/components/scss/*.scss'],
-                task: ['sass:dev']
+                tasks: ['sass:dev']
             }
         },
         sass : {
