@@ -1,22 +1,46 @@
 ﻿@import '_reset';
 
+/*Variables*/
+$border-primary:black;
+$footer-height:100px;
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
 .page {
-	&::after {
-		content:"";
-		clear:both;
-	}
-	
-	.nav-desktop {
-		background:tomato;
-		
-		width:50%;
-		float:left;
-		padding-top:12px;
-	}
-	
-	.content {
-		background:blue;
-		width:50%;
-		float:right;
-	}
+
+    min-height:100%;
+    margin-bottom: -1 * $footer-height;
+
+    &::after {
+            content:"";
+            clear:both;
+            display:block;
+            height: $footer-height;
+    }
+    
+    .nav-desktop {
+            background:tomato;
+            
+            width:50%;
+            float:left;
+            padding-top:12px;
+    }
+    
+    .content {
+            background:blue;
+            width:50%;
+            float:right;
+    }
+
+}
+
+.footer {
+    height:$footer-height;
+    border-top: 1px solid $border-primary;
 }

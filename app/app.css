@@ -45,17 +45,33 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.page::after {
-  content: "";
-  clear: both; }
-.page .nav-desktop {
-  background: tomato;
-  width: 50%;
-  float: left;
-  padding-top: 12px; }
-.page .content {
-  background: blue;
-  width: 50%;
-  float: right; }
+/*Variables*/
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+.page {
+  min-height: 100%;
+  margin-bottom: -100px; }
+  .page::after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 100px; }
+  .page .nav-desktop {
+    background: tomato;
+    width: 50%;
+    float: left;
+    padding-top: 12px; }
+  .page .content {
+    background: blue;
+    width: 50%;
+    float: right; }
+
+.footer {
+  height: 100px;
+  border-top: 1px solid black; }
 
 /*# sourceMappingURL=app.css.map */
