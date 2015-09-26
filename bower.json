@@ -1,0 +1,22 @@
+{
+  "name": "codeLou_SitStayPlay",
+  "version": "0.0.1",
+  "homepage": "https://github.com/andrewtyped/codeLou_SitStayPlay",
+  "authors": [
+    "Andrew S. Barger"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-route": "~1.4.6"
+  }
+}
