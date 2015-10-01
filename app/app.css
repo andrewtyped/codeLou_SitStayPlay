@@ -132,7 +132,8 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: black;
+  opacity: 0; }
   .light-box nav {
     margin-top: 25%; }
     .light-box nav ul {
@@ -142,6 +143,60 @@ a {
       line-height: 3em; }
       .light-box nav ul a {
         color: white; }
+
+@-webkit-keyframes fade-0-80 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.8; } }
+@-moz-keyframes fade-0-80 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.8; } }
+@-o-keyframes fade-0-80 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.8; } }
+@keyframes fade-0-80 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.8; } }
+.fade-0-80 {
+  -webkit-animation: fade-0-80 0.75s;
+  -moz-animation: fade-0-80 0.75s;
+  -o-animation: fade-0-80 0.75s;
+  animation: fade-0-80 0.75s;
+  opacity: 0.8; }
+
+@-webkit-keyframes fade-80-0 {
+  from {
+    opacity: 0.8; }
+  to {
+    opacity: 0; } }
+@-moz-keyframes fade-80-0 {
+  from {
+    opacity: 0.8; }
+  to {
+    opacity: 0; } }
+@-o-keyframes fade-80-0 {
+  from {
+    opacity: 0.8; }
+  to {
+    opacity: 0; } }
+@keyframes fade-80-0 {
+  from {
+    opacity: 0.8; }
+  to {
+    opacity: 0; } }
+.fade-80-0 {
+  -webkit-animation: fade-80-0 0.5s;
+  -moz-animation: fade-80-0 0.5s;
+  -o-animation: fade-80-0 0.5s;
+  animation: fade-80-0 0.5s;
+  opacity: 0; }
 
 .footer {
   height: 100px;

@@ -32,6 +32,53 @@ $footer-height:100px;
     margin-right: auto;
 }
 
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin fade($opacityFrom, $opacityTo, $time) {
+
+    $name: fade-#{$opacityFrom*100}-#{$opacityTo*100};
+
+    @include keyframes(#{$name}) {
+        from {opacity: $opacityFrom}
+        to {opacity: $opacityTo}
+    }
+
+    .#{$name} {
+        @include animation(#{$name} $time);
+        opacity: $opacityTo;
+    }
+}
+
 /*end utilities*/
 
 * {
@@ -144,7 +191,8 @@ a {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: fade-out($bg-secondary, 0.2);
+    background-color: $bg-secondary;
+    opacity:0;
 
     nav {
         margin-top: 25%;
@@ -156,11 +204,14 @@ a {
             line-height:3em;
 
             a {
-                color: white;
+                color: $text-secondary;
             }
         }
     } 
 }
+
+@include fade(0.0,0.8,0.75s);
+@include fade(0.8,0.0,0.50s);
 
 .footer {
     height:$footer-height;
