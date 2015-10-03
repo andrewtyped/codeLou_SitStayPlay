@@ -1,4 +1,5 @@
-﻿@import '_reset';
+﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,900,700);
+@import '_reset';
 
 /*Variables*/
 $bg-primary: white;
@@ -8,6 +9,30 @@ $text-secondary: white;
 $border-primary:black;
 $footer-height:100px;
 
+/* fonts */
+
+@mixin font-lato-norm {
+    font-family: 'Lato', sans-serif;
+}
+
+@mixin font-lato-light {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+@mixin font-lato-bold {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+@mixin font-lato-ultra-bold {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+} 
+
+
+/* end fonts */
 /*break points*/
 
 @mixin tablet {
