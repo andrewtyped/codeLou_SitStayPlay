@@ -1,4 +1,4 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,900,700);
+﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900,700);
 @import '_reset';
 
 /*Variables*/
@@ -18,7 +18,6 @@ $footer-height:100px;
 @mixin font-lato-light {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    font-style: italic;
 }
 
 @mixin font-lato-bold {
@@ -36,7 +35,7 @@ $footer-height:100px;
 /*break points*/
 
 @mixin tablet {
-    @media screen and (min-width: 706px) and (max-width: 1023px) {
+    @media screen and (min-width: 751px) and (max-width: 1023px) {
         @content;
     }
 }
@@ -199,6 +198,10 @@ a {
                li {
                    display: inline-block;
                    padding: 0 30px;
+
+                   .nav-mobile-hover {
+                       display:none;
+                   }
                }
            }
        }
@@ -254,8 +257,25 @@ a {
             font-size: 2em;
             line-height:3em;
 
+            .nav-mobile-hover {
+                display:none;
+            }
+
             a {
+                position:relative;
                 color: $text-secondary;
+
+                &:hover, &:active {
+                    font-size:0.95em;
+
+                    > .nav-mobile-hover {
+                        display:inline-block;
+                        color: $text-secondary;
+                        position:absolute;
+                        line-height:inherit;
+                        left: -1.5em;
+                    }
+                }
             }
         }
     } 

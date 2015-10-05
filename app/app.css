@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,900,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900,700);
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -67,7 +67,7 @@ h1 {
   line-height: 1.5em;
   text-align: center;
   color: black; }
-  @media screen and (min-width: 706px) and (max-width: 1023px) {
+  @media screen and (min-width: 751px) and (max-width: 1023px) {
     h1 {
       font-size: 3em;
       line-height: 2em; } }
@@ -113,7 +113,7 @@ a {
         -moz-box-shadow: inset 0px 5px 10px -5px gray;
         box-shadow: inset 0px 5px 10px -5px gray;
         outline: none; }
-      @media screen and (min-width: 706px) and (max-width: 1023px) {
+      @media screen and (min-width: 751px) and (max-width: 1023px) {
         .page .header-mobile .nav-toggle {
           display: none; } }
     .page .header-mobile nav ul {
@@ -124,13 +124,15 @@ a {
       padding-bottom: 10px; }
       .page .header-mobile nav ul li {
         display: none; }
-      @media screen and (min-width: 706px) and (max-width: 1023px) {
+      @media screen and (min-width: 751px) and (max-width: 1023px) {
         .page .header-mobile nav ul {
           font-size: 1.8em;
           line-height: 2em; }
           .page .header-mobile nav ul li {
             display: inline-block;
-            padding: 0 30px; } }
+            padding: 0 30px; }
+            .page .header-mobile nav ul li .nav-mobile-hover {
+              display: none; } }
     @media screen and (min-width: 1024px) {
       .page .header-mobile {
         display: none; } }
@@ -164,8 +166,19 @@ a {
       text-align: center;
       font-size: 2em;
       line-height: 3em; }
+      .light-box nav ul .nav-mobile-hover {
+        display: none; }
       .light-box nav ul a {
+        position: relative;
         color: white; }
+        .light-box nav ul a:hover, .light-box nav ul a:active {
+          font-size: 0.95em; }
+          .light-box nav ul a:hover > .nav-mobile-hover, .light-box nav ul a:active > .nav-mobile-hover {
+            display: inline-block;
+            color: white;
+            position: absolute;
+            line-height: inherit;
+            left: -1.5em; }
 
 @-webkit-keyframes fade-0-80 {
   from {
