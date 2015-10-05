@@ -34,6 +34,12 @@ $footer-height:100px;
 /* end fonts */
 /*break points*/
 
+@mixin mini {
+    @media screen and (max-width:350px) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media screen and (min-width: 751px) and (max-width: 1023px) {
         @content;
@@ -128,6 +134,10 @@ h1 {
     line-height:1.5em;
     text-align: center;
     color: $text-primary;
+
+    @include mini {
+        font-size: 2em;
+    }
 
     @include tablet {
         font-size: 3em;
@@ -264,7 +274,7 @@ a {
     opacity:0;
 
     nav {
-        margin-top: 25%;
+        padding-top: 20%;
 
         ul {
             list-style: none;
