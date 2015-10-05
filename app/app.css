@@ -116,7 +116,7 @@ a {
         -moz-box-shadow: inset 0px 5px 10px -5px gray;
         box-shadow: inset 0px 5px 10px -5px gray;
         outline: none; }
-      @media screen and (min-width: 751px) and (max-width: 1023px) {
+      @media screen and (min-width: 1024px) {
         .page .header-mobile .nav-toggle {
           display: none; } }
     .page .header-mobile nav ul {
@@ -127,13 +127,12 @@ a {
       padding-bottom: 10px; }
       .page .header-mobile nav ul li {
         display: none; }
-      @media screen and (min-width: 751px) and (max-width: 1023px) {
+      @media screen and (min-width: 1024px) {
         .page .header-mobile nav ul {
-          font-size: 1.8em;
-          line-height: 2em; }
+          font-size: 1.6em; }
           .page .header-mobile nav ul li {
             display: inline-block;
-            padding: 0 30px; }
+            padding: 0 40px; }
             .page .header-mobile nav ul li a {
               position: relative; }
               .page .header-mobile nav ul li a .nav-mobile-hover {
@@ -144,9 +143,6 @@ a {
                 font-size: 0.85em;
                 line-height: inherit;
                 left: -1.1em; } }
-    @media screen and (min-width: 1024px) {
-      .page .header-mobile {
-        display: none; } }
   .page::after {
     content: "";
     clear: both;

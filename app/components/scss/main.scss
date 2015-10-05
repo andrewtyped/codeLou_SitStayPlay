@@ -185,7 +185,7 @@ a {
                outline:none;
            }
 
-           @include tablet {
+           @include desktop {
                display:none;
            }
        }
@@ -201,13 +201,12 @@ a {
                display:none;
            }
 
-           @include tablet {
-               font-size:1.8em;
-               line-height:2em;
+           @include desktop {
+               font-size:1.6em;
 
                li {
                    display: inline-block;
-                   padding: 0 30px;
+                   padding: 0 40px;
 
                    a {
                        position:relative;
@@ -229,10 +228,6 @@ a {
                    }
                }
            }
-       }
-
-       @include desktop {
-           display:none;
        }
    }
 
