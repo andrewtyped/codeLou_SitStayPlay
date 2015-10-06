@@ -86,7 +86,7 @@ a {
 .page {
   /*sticky footer*/
   min-height: 100%;
-  margin-bottom: -100px;
+  margin-bottom: -50px;
   /*end sticky footer*/ }
   .page .header-mobile {
     background-color: white;
@@ -146,7 +146,7 @@ a {
     content: "";
     clear: both;
     display: block;
-    height: 100px; }
+    height: 50px; }
   .page .nav-desktop {
     background: tomato;
     width: 50%;
@@ -245,7 +245,19 @@ a {
   opacity: 0; }
 
 .footer {
-  height: 100px;
-  border-top: 1px solid #666666; }
+  height: 50px;
+  border-top: 1px solid #666666;
+  background-color: #d9d9d9; }
+  .footer .footer-col {
+    width: 33.33%;
+    min-height: 1px;
+    padding: 15px 15px 0px 15px;
+    float: left; }
+  .footer .social-media li {
+    display: inline-block;
+    padding: 0 10px; }
+  .footer .credit, .footer .quick-contact {
+    font-size: 0.75em;
+    text-align: center; }
 
 /*# sourceMappingURL=app.css.map */

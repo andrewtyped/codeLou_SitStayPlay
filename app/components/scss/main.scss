@@ -7,7 +7,7 @@ $bg-secondary: black;
 $text-primary: black;
 $text-secondary: white;
 $border-primary: lighten($bg-secondary, 40%);
-$footer-height:100px;
+$footer-height:50px;
 
 /* fonts */
 
@@ -316,5 +316,43 @@ a {
 
 .footer {
     height:$footer-height;
-    border-top: 1px solid $border-primary;
+    border-top: 1px solid $border-primary; 
+    background-color: darken($bg-primary, 15%);
+    
+    .footer-col {
+        width: 33.33%;
+        min-height:1px;
+        padding: 15px 15px 0px 15px;
+        float:left;
+    }
+
+    .social-media {
+        
+        li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+    }
+
+    .credit, .quick-contact {
+        font-size: 0.75em;
+        text-align:center;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
