@@ -7,6 +7,7 @@ $bg-secondary: black;
 $text-primary: black;
 $text-secondary: white;
 $border-primary: lighten($bg-secondary, 40%);
+$desktop-nav-width: 550px;
 $footer-height:50px;
 
 /* fonts */
@@ -249,19 +250,26 @@ a {
     /*end sticky footer*/
     
     .nav-desktop {
-            background:tomato;
-            
-            width:50%;
+
+        display:none;
+
+        @include desktop {
+            display:block;
+            background:url('components/img/alt-dogs-in-print-bw.png');
+            min-height:550px;
+            width:550px;
             float:left;
             padding-top:12px;
+        }
     }
     
     .content {
             background:blue;
-            width:50%;
-            float:right;
-    }
 
+            @include desktop {
+            margin-left: $desktop-nav-width + 10px;
+        }
+    }
 }
 
 .light-box {

@@ -148,14 +148,20 @@ a {
     display: block;
     height: 50px; }
   .page .nav-desktop {
-    background: tomato;
-    width: 50%;
-    float: left;
-    padding-top: 12px; }
+    display: none; }
+    @media screen and (min-width: 1024px) {
+      .page .nav-desktop {
+        display: block;
+        background: url("components/img/alt-dogs-in-print-bw.png");
+        min-height: 550px;
+        width: 550px;
+        float: left;
+        padding-top: 12px; } }
   .page .content {
-    background: blue;
-    width: 50%;
-    float: right; }
+    background: blue; }
+    @media screen and (min-width: 1024px) {
+      .page .content {
+        margin-left: 560px; } }
 
 .light-box {
   position: absolute;
