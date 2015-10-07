@@ -209,7 +209,46 @@ a {
 
            @include desktop {
                font-size:1.6em;
+               //display:none;
 
+               &>li {
+                   position:absolute;
+                   display:block;
+                   z-index:2;
+
+                   a {
+                       background-color: rgba(0,0,0,0.2);
+                       border-radius: 4px;
+                       color:$text-secondary;
+
+                       .nav-mobile-hover {
+                           display: none;
+                       }
+                   }
+               }
+
+               &>li:first-child {
+                   top: 180px;
+                   left:220px;
+               }
+
+               &>li:nth-child(2) {
+                   top: 300px;
+                   left:330px;
+               }
+
+               &>li:nth-child(3) {
+                   top: 430px;
+                   left:275px;
+               }
+
+               &>li:last-child {
+                   top: 530px;
+                   left:190px;
+               }
+
+/*
+/*
                li {
                    display: inline-block;
                    padding: 0 40px;
@@ -233,6 +272,7 @@ a {
                        }
                    }
                }
+               */
            }
        }
    }
@@ -255,11 +295,10 @@ a {
 
         @include desktop {
             display:block;
-            background:url('components/img/alt-dogs-in-print-bw.png');
+     //       background:url('components/img/alt-dogs-in-print-bw.png');
             min-height:550px;
             width:550px;
             float:left;
-            padding-top:12px;
         }
     }
     

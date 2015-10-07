@@ -128,20 +128,55 @@ a {
         display: none; }
       @media screen and (min-width: 1024px) {
         .page .header-mobile nav ul {
-          font-size: 1.6em; }
-          .page .header-mobile nav ul li {
-            display: inline-block;
-            padding: 0 40px; }
-            .page .header-mobile nav ul li a {
-              position: relative; }
-              .page .header-mobile nav ul li a .nav-mobile-hover {
+          font-size: 1.6em;
+          /*
+          /*
+                         li {
+                             display: inline-block;
+                             padding: 0 40px;
+          
+                             a {
+                                 position:relative;
+          
+                                 .nav-mobile-hover {
+                                     display:none;
+                                 }
+          
+                                 &:hover, &:active {
+          
+                                     > .nav-mobile-hover {
+                                         display:inline-block;
+                                         position:absolute;
+                                         font-size:0.85em;
+                                         line-height:inherit;
+                                         left: -1.1em;
+                                     }
+                                 }
+                             }
+                         }
+                         */ }
+          .page .header-mobile nav ul > li {
+            position: absolute;
+            display: block;
+            z-index: 2; }
+            .page .header-mobile nav ul > li a {
+              background-color: rgba(0, 0, 0, 0.2);
+              border-radius: 4px;
+              color: white; }
+              .page .header-mobile nav ul > li a .nav-mobile-hover {
                 display: none; }
-              .page .header-mobile nav ul li a:hover > .nav-mobile-hover, .page .header-mobile nav ul li a:active > .nav-mobile-hover {
-                display: inline-block;
-                position: absolute;
-                font-size: 0.85em;
-                line-height: inherit;
-                left: -1.1em; } }
+          .page .header-mobile nav ul > li:first-child {
+            top: 180px;
+            left: 220px; }
+          .page .header-mobile nav ul > li:nth-child(2) {
+            top: 300px;
+            left: 330px; }
+          .page .header-mobile nav ul > li:nth-child(3) {
+            top: 430px;
+            left: 275px; }
+          .page .header-mobile nav ul > li:last-child {
+            top: 530px;
+            left: 190px; } }
   .page::after {
     content: "";
     clear: both;
@@ -152,11 +187,9 @@ a {
     @media screen and (min-width: 1024px) {
       .page .nav-desktop {
         display: block;
-        background: url("components/img/alt-dogs-in-print-bw.png");
         min-height: 550px;
         width: 550px;
-        float: left;
-        padding-top: 12px; } }
+        float: left; } }
   .page .content {
     background: blue; }
     @media screen and (min-width: 1024px) {
