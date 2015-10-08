@@ -160,7 +160,7 @@ h1 {
 
 a {
     text-decoration: none;
-    color: $text-primary;
+    color: inherit;
 }
 
 .page {
@@ -234,13 +234,22 @@ a {
 
            font-size:1.6em;
 
+           #nav-desktop .header-group {
+               position: absolute;
+               font-size: 2em;
+               color: $text-secondary;
+               line-height: 1.5em;
+               top: 130px;
+               left: 80px;
+           }
+
            #nav-desktop ul {
                &>li {
                    position:absolute;
                    z-index:2;
 
                    a {
-                       background-color: rgba(0,0,0,0.2);
+                       //background-color: rgba(0,0,0,0.2);
                        border-radius: 4px;
                        color:$text-secondary;
 
