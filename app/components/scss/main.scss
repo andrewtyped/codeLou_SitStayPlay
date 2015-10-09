@@ -7,10 +7,11 @@ $bg-secondary: black;
 $text-primary: black;
 $text-secondary: white;
 $border-primary: lighten($bg-secondary, 40%);
-$desktop-nav-width: 550px;
 $footer-height:50px;
 $pawprint-top: 30px;
 $pawprint-left:30px;
+$desktop-nav-width: 500px;
+$jumbo-nav-width: 600px; 
 /* fonts */
 
 @mixin font-lato-norm {
@@ -50,6 +51,12 @@ $pawprint-left:30px;
 
 @mixin desktop {
     @media screen and (min-width:1024px) {
+        @content;
+    }
+}
+
+@mixin jumbo {
+    @media screen and (min-width: 1400px) {
         @content;
     }
 }
@@ -221,15 +228,23 @@ a {
        @include desktop {
 
            display: block;
-
-           display:block;
-           min-height:550px + $pawprint-top;
-           width:550px + $pawprint-left;
            float:left;
+
+           min-height:$desktop-nav-width + $pawprint-top;
+           width:$desktop-nav-width + $pawprint-left;
+
+           @include jumbo {
+               min-height: $jumbo-nav-width + $pawprint-top;
+               width: $jumbo-nav-width + $pawprint-top;
+           }
 
            img {
                margin-top:$pawprint-top;
                margin-left: $pawprint-left;
+
+               @include jumbo {
+                   width: $jumbo-nav-width;
+               }
            }
 
            font-size:1.6em;
@@ -242,6 +257,11 @@ a {
                top: 130px;
                left: 80px;
                text-shadow: 0px 4px 4px darken($bg-primary,80%);
+
+               @include jumbo {
+                   font-size: 2.7em;
+                   top:145px;
+               }
            }
 
            #nav-desktop ul {
@@ -257,26 +277,50 @@ a {
                            display: none;
                        }
                    }
+
+                   @include jumbo {
+                       font-size:1.3em;
+                   }
                }
 
                &>li:first-child {
                    top: 45px + $pawprint-top;
                    left:220px + $pawprint-left;
+
+                   @include jumbo {
+                       top: 45px + $pawprint-top;
+                       left:270px + $pawprint-left;
+                   }
                }
 
                &>li:nth-child(2) {
                    top: 165px + $pawprint-top;
                    left:330px + $pawprint-left;
+
+                   @include jumbo {
+                       top: 200px + $pawprint-top;
+                       left:420px + $pawprint-left;
+                   }
                }
 
                &>li:nth-child(3) {
                    top: 295px + $pawprint-top;
                    left:320px + $pawprint-left;
+
+                   @include jumbo {
+                       top: 360px + $pawprint-top;
+                       left:400px + $pawprint-left;
+                   }
                }
 
                &>li:last-child {
                    top: 395px + $pawprint-top;
                    left:150px + $pawprint-left;
+
+                   @include jumbo {
+                       top: 490px + $pawprint-top;
+                       left:185px + $pawprint-left;
+                   }
                }
            }
        }
@@ -286,7 +330,11 @@ a {
         background:blue;
 
         @include desktop {
-            margin-left: $desktop-nav-width + 10px;
+            margin-left: $desktop-nav-width + $pawprint-left + 10px;
+        }
+
+        @include jumbo {
+            margin-left: $jumbo-nav-width + $pawprint-left + 10px;
         }
     }
     
