@@ -148,12 +148,13 @@ a {
           color: white;
           line-height: 1.5em;
           top: 130px;
-          left: 80px; }
+          left: 80px;
+          text-shadow: 0px 4px 4px #333333; }
         .page .header-desktop #nav-desktop ul > li {
           position: absolute;
           z-index: 2; }
           .page .header-desktop #nav-desktop ul > li a {
-            border-radius: 4px;
+            text-shadow: 0px 4px 4px #333333;
             color: white; }
             .page .header-desktop #nav-desktop ul > li a .nav-mobile-hover {
               display: none; }
