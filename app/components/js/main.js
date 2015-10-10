@@ -28,3 +28,17 @@ app.bindEvents = function bindEvents() {
 }
 
 app.bindEvents();
+
+var req = new XMLHttpRequest();
+req.onreadystatechange = function() {
+    if (req.readyState === 4 && req.status === 200) {
+        var content = document.getElementById('content');
+        content.innerHTML = req.responseText;
+    }
+    else if (req.readyState === 4) {
+        alert('failed');
+    }
+};
+
+req.open('GET','views/home.html');
+req.send();
