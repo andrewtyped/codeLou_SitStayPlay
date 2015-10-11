@@ -1,0 +1,54 @@
+﻿.light-box {
+    position:absolute;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    width: 100%;
+
+    background-color: $bg-secondary;
+    opacity:0;
+
+    nav {
+        padding-top: 20%;
+
+        @include landscape {
+            padding-top: 0;
+        }
+
+        ul {
+            font-size: 2em;
+            line-height:3em;
+            text-align: center;
+
+            list-style: none;
+
+            .nav-mobile-hover {
+                display:none;
+            }
+
+            a {
+                position:relative;
+
+                color: $text-secondary;
+
+                &:hover, &:active {
+                    font-size:0.95em;
+
+                    > .nav-mobile-hover {
+                        display:inline-block;
+                        position:absolute;
+                        left: -1.5em;
+
+                        font-size:0.85em;
+                        line-height:inherit;
+
+                        color: $text-secondary;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@include fade(0.0,0.8,0.75s);
+@include fade(0.8,0.0,0.50s);

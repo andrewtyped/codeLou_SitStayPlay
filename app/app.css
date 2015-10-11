@@ -52,6 +52,93 @@ table {
 /*end break points*/
 /*utilities*/
 /*end utilities*/
+.light-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0; }
+  .light-box nav {
+    padding-top: 20%; }
+    @media screen and (orientation: landscape) {
+      .light-box nav {
+        padding-top: 0; } }
+    .light-box nav ul {
+      font-size: 2em;
+      line-height: 3em;
+      text-align: center;
+      list-style: none; }
+      .light-box nav ul .nav-mobile-hover {
+        display: none; }
+      .light-box nav ul a {
+        position: relative;
+        color: white; }
+        .light-box nav ul a:hover, .light-box nav ul a:active {
+          font-size: 0.95em; }
+          .light-box nav ul a:hover > .nav-mobile-hover, .light-box nav ul a:active > .nav-mobile-hover {
+            display: inline-block;
+            position: absolute;
+            left: -1.5em;
+            font-size: 0.85em;
+            line-height: inherit;
+            color: white; }
+
+@-webkit-keyframes fade-0-80 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.8; } }
+@-moz-keyframes fade-0-80 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.8; } }
+@-o-keyframes fade-0-80 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.8; } }
+@keyframes fade-0-80 {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.8; } }
+.fade-0-80 {
+  -webkit-animation: fade-0-80 0.75s;
+  -moz-animation: fade-0-80 0.75s;
+  -o-animation: fade-0-80 0.75s;
+  animation: fade-0-80 0.75s;
+  opacity: 0.8; }
+
+@-webkit-keyframes fade-80-0 {
+  from {
+    opacity: 0.8; }
+  to {
+    opacity: 0; } }
+@-moz-keyframes fade-80-0 {
+  from {
+    opacity: 0.8; }
+  to {
+    opacity: 0; } }
+@-o-keyframes fade-80-0 {
+  from {
+    opacity: 0.8; }
+  to {
+    opacity: 0; } }
+@keyframes fade-80-0 {
+  from {
+    opacity: 0.8; }
+  to {
+    opacity: 0; } }
+.fade-80-0 {
+  -webkit-animation: fade-80-0 0.5s;
+  -moz-animation: fade-80-0 0.5s;
+  -o-animation: fade-80-0 0.5s;
+  animation: fade-80-0 0.5s;
+  opacity: 0; }
+
 * {
   box-sizing: border-box; }
 
@@ -219,93 +306,6 @@ a {
     clear: both;
     display: block;
     height: 50px; }
-
-.light-box {
-  position: absolute;
-  left: 0;
-  top: 0;
-  min-height: 100%;
-  width: 100%;
-  background-color: black;
-  opacity: 0; }
-  .light-box nav {
-    padding-top: 20%; }
-    @media screen and (orientation: landscape) {
-      .light-box nav {
-        padding-top: 0; } }
-    .light-box nav ul {
-      font-size: 2em;
-      line-height: 3em;
-      text-align: center;
-      list-style: none; }
-      .light-box nav ul .nav-mobile-hover {
-        display: none; }
-      .light-box nav ul a {
-        position: relative;
-        color: white; }
-        .light-box nav ul a:hover, .light-box nav ul a:active {
-          font-size: 0.95em; }
-          .light-box nav ul a:hover > .nav-mobile-hover, .light-box nav ul a:active > .nav-mobile-hover {
-            display: inline-block;
-            position: absolute;
-            left: -1.5em;
-            font-size: 0.85em;
-            line-height: inherit;
-            color: white; }
-
-@-webkit-keyframes fade-0-80 {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 0.8; } }
-@-moz-keyframes fade-0-80 {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 0.8; } }
-@-o-keyframes fade-0-80 {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 0.8; } }
-@keyframes fade-0-80 {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 0.8; } }
-.fade-0-80 {
-  -webkit-animation: fade-0-80 0.75s;
-  -moz-animation: fade-0-80 0.75s;
-  -o-animation: fade-0-80 0.75s;
-  animation: fade-0-80 0.75s;
-  opacity: 0.8; }
-
-@-webkit-keyframes fade-80-0 {
-  from {
-    opacity: 0.8; }
-  to {
-    opacity: 0; } }
-@-moz-keyframes fade-80-0 {
-  from {
-    opacity: 0.8; }
-  to {
-    opacity: 0; } }
-@-o-keyframes fade-80-0 {
-  from {
-    opacity: 0.8; }
-  to {
-    opacity: 0; } }
-@keyframes fade-80-0 {
-  from {
-    opacity: 0.8; }
-  to {
-    opacity: 0; } }
-.fade-80-0 {
-  -webkit-animation: fade-80-0 0.5s;
-  -moz-animation: fade-80-0 0.5s;
-  -o-animation: fade-80-0 0.5s;
-  animation: fade-80-0 0.5s;
-  opacity: 0; }
 
 .footer {
   height: 50px;
