@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="app.css">
     <head>
+
     <body>
         <div class="page">
             <div class="header-mobile">
@@ -21,7 +22,9 @@
                         <i class="fa fa-navicon fa-lg"></i>
                 </button>
 
-                <h1>Sit, Stay & Play!</h1>
+                <a class="partial-link" data-target="home">
+                    <h1>Sit, Stay & Play!</h1>
+                </a>
 
                 <nav id="nav-mobile">
                     <ul>
@@ -31,22 +34,25 @@
                                 Services
                             </a>
                         </li>
+
                         <li>
-                            <a href="#">
+                            <a class="partial-link" data-target="contact">
                                 <i class="fa fa-paw nav-mobile-hover"></i>
                                 Contact
                             </a>
                         </li>
+
                         <li>
-                            <a href="#">
-                                <i class="fa fa-paw nav-mobile-hover"></i>
-                                Foster Program
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                            <a class="partial-link" data-target="photos">
                                 <i class="fa fa-paw nav-mobile-hover"></i>
                                 Photos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="partial-link" data-target="foster">
+                                <i class="fa fa-paw nav-mobile-hover"></i>
+                                Foster Program
                             </a>
                         </li>
                     </ul>
@@ -56,7 +62,7 @@
             <div class="header-desktop">
                 <nav id="nav-desktop">
                     <div class="header-group">
-                        <a href="">
+                        <a class="partial-link" data-target="home">
                             <div class="header-sit">Sit,</div>
                             <div class="header-stay">Stay &</div>
                             <div class="header-play">Play!</div>
@@ -64,25 +70,28 @@
                     </div>
                     <ul>
                         <li>
-                            <a class="partial-link" data-partial="services">
+                            <a class="partial-link" data-target="services">
                                 <i class="fa fa-paw nav-mobile-hover"></i>
                                 Services
                             </a>
                         </li>
+
                         <li>
-                            <a href="#">
+                            <a class="partial-link" data-target="contact">
                                 <i class="fa fa-paw nav-mobile-hover"></i>
                                 Contact
                             </a>
                         </li>
+
                         <li>
-                            <a href="#">
+                            <a class="partial-link" data-target="photos">
                                 <i class="fa fa-paw nav-mobile-hover"></i>
                                 Photos
                             </a>
                         </li>
+
                         <li>
-                            <a href="#">
+                            <a class="partial-link" data-target="foster">
                                 <i class="fa fa-paw nav-mobile-hover"></i>
                                 Foster Program
                             </a>
@@ -104,23 +113,28 @@
                 <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
             </ul>
+
             <div class="credit footer-col">
                 <div>
                     Created by <a href="#">Andrew Barger</a>
                 </div>
+
                 <div>
                     <i class="fa fa-copyright"></i> 2015
                 </div>
             </div>
+
             <div class="quick-contact footer-col">
                 <div>
                     Sit, Stay & Play!
                 </div>
+
                 <div>
                     <a href="tel:+15026341111">(502) 634-1111</a>
                 </div>
             </div>
         </div>
     </body>
+
     <script type="text/javascript" src="app.min.js"></script>
 </html>
