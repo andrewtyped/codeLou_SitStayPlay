@@ -294,14 +294,12 @@ a {
         left: 215px;
         top: 520px; } }
 
-  .page .content {
-    background: blue; }
-    @media screen and (min-width: 1024px) {
-      .page .content {
-        margin-left: 540px; } }
-    @media screen and (min-width: 1400px) {
-      .page .content {
-        margin-left: 640px; } }
+  @media screen and (min-width: 1024px) {
+    .page .content {
+      margin-left: 540px; } }
+  @media screen and (min-width: 1400px) {
+    .page .content {
+      margin-left: 640px; } }
   .page::after {
     content: "";
     clear: both;
