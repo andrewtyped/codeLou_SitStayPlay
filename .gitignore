@@ -18,6 +18,3 @@ node_modules
 node_modules/*
 
 #End Node Modules#
-
-#Bower Components#
-bower_components/
