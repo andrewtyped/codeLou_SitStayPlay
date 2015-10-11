@@ -1,0 +1,119 @@
+﻿/* fonts */
+
+@mixin font-lato-norm {
+    font-family: 'Lato', sans-serif;
+}
+
+@mixin font-lato-light {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+@mixin font-lato-bold {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+@mixin font-lato-ultra-bold {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+} 
+
+
+/* end fonts */
+/*break points*/
+
+@mixin mini {
+    @media screen and (max-width:350px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 751px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width:1024px) {
+        @content;
+    }
+}
+
+@mixin jumbo {
+    @media screen and (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin landscape {
+    @media screen and (orientation:landscape) {
+        @content;
+    }
+}
+
+/*end break points*/
+
+/*utilities*/
+
+@mixin center {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin fade($opacityFrom, $opacityTo, $time) {
+
+    $name: fade-#{$opacityFrom*100}-#{$opacityTo*100};
+
+    @include keyframes(#{$name}) {
+        from {opacity: $opacityFrom}
+        to {opacity: $opacityTo}
+    }
+
+    .#{$name} {
+        @include animation(#{$name} $time);
+        opacity: $opacityTo;
+    }
+}
+
+@mixin box-shadow($attrs) {
+    -webkit-box-shadow: #{$attrs};
+    -moz-box-shadow: #{$attrs};
+    box-shadow: #{$attrs};
+}
+
+/*end utilities*/
