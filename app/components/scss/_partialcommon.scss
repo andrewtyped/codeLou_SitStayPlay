@@ -1,0 +1,72 @@
+﻿
+.inner-page {
+    @include center;
+
+    width:440px;
+
+    @include jumbo {
+        width:550px;
+    }
+}
+
+.sub-header {
+    margin: 0;
+    padding-bottom:10px;
+
+    font-style:italic;
+    font-weight:300;
+}
+
+.inner-page-text {
+    margin: 20px 0;
+    padding: 0 20px;
+
+    font-size: 1.1em;
+    letter-spacing:0.03em;
+    line-height:1.5em;
+    text-align:justify;
+}
+
+.inner-page-list {
+    padding-left:20px;
+
+    font-size:1.1em;
+    line-height: 2em;
+
+    li::before {
+        content: "\f1b0";
+        font-family: FontAwesome;
+        padding-right: 10px;
+        display: inline;
+
+        font-size: 0.8em;
+    }
+}
+
+.package, .day, .boarding-package, .house-call-rate {
+    display: inline-block;
+}
+
+.package {
+    width: 180px;
+}
+
+.day {
+    width: 155px;
+}
+
+.boarding-package {
+    width: 75px;
+}
+
+.house-call-rate {
+    width: 165px;
+}
+
+.disclaimer {
+    margin:0;
+
+    font-size:1em;
+    font-weight:300;
+    font-style:italic;
+}

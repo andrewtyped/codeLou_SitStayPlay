@@ -139,6 +139,61 @@ table {
   animation: fade-80-0 0.5s;
   opacity: 0; }
 
+.inner-page {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 440px; }
+  @media screen and (min-width: 1400px) {
+    .inner-page {
+      width: 550px; } }
+
+.sub-header {
+  margin: 0;
+  padding-bottom: 10px;
+  font-style: italic;
+  font-weight: 300; }
+
+.inner-page-text {
+  margin: 20px 0;
+  padding: 0 20px;
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
+  line-height: 1.5em;
+  text-align: justify; }
+
+.inner-page-list {
+  padding-left: 20px;
+  font-size: 1.1em;
+  line-height: 2em; }
+  .inner-page-list li::before {
+    content: "\f1b0";
+    font-family: FontAwesome;
+    padding-right: 10px;
+    display: inline;
+    font-size: 0.8em; }
+
+.package, .day, .boarding-package, .house-call-rate {
+  display: inline-block; }
+
+.package {
+  width: 180px; }
+
+.day {
+  width: 155px; }
+
+.boarding-package {
+  width: 75px; }
+
+.house-call-rate {
+  width: 165px; }
+
+.disclaimer {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 300;
+  font-style: italic; }
+
 @media screen and (min-width: 751px) and (max-width: 1023px) {
   .home-page-header {
     display: none; } }
@@ -178,11 +233,13 @@ html, body {
 body {
   font-family: 'Lato', sans-serif; }
 
+h1, h2 {
+  color: black; }
+
 h1 {
   font-size: 2.5em;
   line-height: 1.5em;
-  text-align: center;
-  color: black; }
+  text-align: center; }
   @media screen and (max-width: 350px) {
     h1 {
       font-size: 2em; } }
@@ -195,13 +252,51 @@ h1 {
       font-size: 4em;
       line-height: 2em; } }
 
+h2 {
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1.25em; }
+  @media screen and (max-width: 350px) {
+    h2 {
+      font-size: 2em; } }
+  @media screen and (min-width: 751px) and (max-width: 1023px) {
+    h2 {
+      font-size: 2.5em;
+      line-height: 1.75em; } }
+  @media screen and (min-width: 1024px) {
+    h2 {
+      font-size: 3em;
+      line-height: 1.75em; } }
+
+h3 {
+  margin-top: 5px;
+  padding-left: 5px;
+  font-size: 1.75em;
+  font-weight: 300;
+  line-height: 2em; }
+  @media screen and (max-width: 350px) {
+    h3 {
+      font-size: 1.5em; } }
+  @media screen and (min-width: 751px) and (max-width: 1023px) {
+    h3 {
+      font-size: 1.75em; } }
+  @media screen and (min-width: 1024px) {
+    h3 {
+      font-size: 2em; } }
+
+h4 {
+  padding-left: 10px;
+  font-size: 1.3em;
+  font-weight: 300;
+  line-height: 2em; }
+
 a {
   text-decoration: none;
   color: inherit;
   cursor: pointer; }
 
 p {
-  margin-top: 20px;
+  margin: 20px 0;
   padding: 0 20px;
   font-size: 1.2em;
   letter-spacing: 0.03em;

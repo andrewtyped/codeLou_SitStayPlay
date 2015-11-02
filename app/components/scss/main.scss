@@ -3,7 +3,9 @@
 @import '_vars';
 @import '_utils';
 @import '_lightbox';
+@import '_partialcommon';
 @import '_home';
+@import '_services';
 
 //Conventions
 //  Grouping
@@ -26,6 +28,10 @@ body {
     @include font-lato-norm;
 }
 
+h1, h2 {
+    color:$text-primary;
+}
+
 h1 {
     font-size:2.5em;
     line-height:1.5em;
@@ -44,8 +50,54 @@ h1 {
         font-size: 4em;
         line-height: 2em;
     }
+}
 
-    color: $text-primary;
+h2 {
+    font-size:3em;
+    font-weight:300;
+    line-height:1.25em;
+
+    @include mini {
+        font-size: 2em;
+    }
+
+    @include tablet {
+        font-size: 2.5em;
+        line-height: 1.75em;
+    }
+
+    @include desktop {
+        font-size: 3em;
+        line-height: 1.75em;
+    }
+}
+
+h3 {
+    margin-top:5px;
+    padding-left:5px;
+    font-size:1.75em;
+    font-weight:300;
+    line-height:2em;
+
+
+    @include mini {
+        font-size: 1.5em;
+    }
+
+    @include tablet {
+        font-size: 1.75em;
+    }
+
+    @include desktop {
+        font-size: 2em;
+    }
+}
+
+h4 {
+    padding-left: 10px;
+    font-size: 1.3em;
+    font-weight:300;
+    line-height:2em;
 }
 
 a {
@@ -56,7 +108,7 @@ a {
 }
 
 p {
-    margin-top: 20px;
+    margin: 20px 0;
     padding: 0 20px;
 
     font-size: 1.2em;
