@@ -194,9 +194,11 @@ table {
   font-weight: 300;
   font-style: italic; }
 
-@media screen and (min-width: 751px) and (max-width: 1023px) {
-  .home-page-header {
-    display: none; } }
+.home-page-header {
+  display: none; }
+  @media screen and (min-width: 1024px) {
+    .home-page-header {
+      display: block; } }
 
 .mission {
   margin: 0;
@@ -205,24 +207,6 @@ table {
   font-style: italic;
   font-weight: 300;
   text-align: center; }
-
-.home-page-text-wrap {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 440px; }
-  @media screen and (min-width: 1400px) {
-    .home-page-text-wrap {
-      width: 550px; } }
-
-.broad-services {
-  font-size: 2rem;
-  line-height: 4.8rem; }
-
-.broad-service {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
 
 * {
   box-sizing: border-box; }
