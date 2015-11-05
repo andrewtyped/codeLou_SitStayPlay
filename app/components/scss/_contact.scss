@@ -1,0 +1,41 @@
+﻿$label-width:100px;
+
+form {
+    .form-group {
+        margin-top:15px;
+        padding-left:20px;
+
+        vertical-align:top;
+    }
+
+    label {
+        display:block;
+
+        @include tablet {
+            display:inline-block;
+        }
+
+        width:$label-width;
+        vertical-align:top;
+    }
+
+    input, textarea {
+        padding-left:5px;
+
+        border: 1px solid $text-primary;
+        border-radius:4px;
+    }
+
+    input:not([type='submit']), textarea {
+        width:280px;
+    }
+
+    input[type='submit'] {
+        width:140px;
+        background-color: darken($bg-primary, 15%);
+
+        @include tablet {
+            margin-left:$label-width;
+        }
+    }
+}

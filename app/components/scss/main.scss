@@ -6,6 +6,7 @@
 @import '_partialcommon';
 @import '_home';
 @import '_services';
+@import '_contact';
 
 //Conventions
 //  Grouping
@@ -107,14 +108,17 @@ a {
     cursor:pointer;
 }
 
-p {
-    margin: 20px 0;
-    padding: 0 20px;
-
+input, label, textarea, p {
+    font-family:'Lato', sans-serif;
     font-size: 1.2em;
     letter-spacing:0.03em;
     line-height:1.5em;
     text-align:justify;
+}
+
+p {
+    margin: 20px 0;
+    padding: 0 20px;
 }
 
 .page {
