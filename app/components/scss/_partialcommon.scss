@@ -2,12 +2,16 @@
 .inner-page {
     @include center;
 
-    margin-bottom:10px;
+    margin-bottom:40px;
     width:440px;
 
     @include jumbo {
         width:550px;
     }
+}
+
+section:not(:first-child) {
+    margin-top:40px;
 }
 
 .sub-header {

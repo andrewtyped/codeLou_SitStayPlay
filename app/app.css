@@ -143,11 +143,14 @@ table {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
   width: 440px; }
   @media screen and (min-width: 1400px) {
     .inner-page {
       width: 550px; } }
+
+section:not(:first-child) {
+  margin-top: 40px; }
 
 .sub-header {
   margin: 0;
@@ -208,6 +211,15 @@ table {
   font-style: italic;
   font-weight: 300;
   text-align: center; }
+
+.contact-label, .hours {
+  display: inline-block; }
+
+.contact-label {
+  width: 100px; }
+
+.hours {
+  width: 180px; }
 
 form .form-group {
   margin-top: 15px;
@@ -279,10 +291,10 @@ h2 {
 
 h3 {
   margin-top: 5px;
+  margin-bottom: 20px;
   padding-left: 5px;
   font-size: 1.75em;
-  font-weight: 300;
-  line-height: 2em; }
+  font-weight: 300; }
   @media screen and (max-width: 350px) {
     h3 {
       font-size: 1.5em; } }
@@ -294,10 +306,10 @@ h3 {
       font-size: 2em; } }
 
 h4 {
+  margin-bottom: 10px;
   padding-left: 10px;
   font-size: 1.3em;
-  font-weight: 300;
-  line-height: 2em; }
+  font-weight: 300; }
 
 a {
   text-decoration: none;

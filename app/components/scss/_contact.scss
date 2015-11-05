@@ -1,5 +1,17 @@
 ﻿$label-width:100px;
 
+.contact-label, .hours {
+    display:inline-block;
+}
+
+.contact-label {
+    width: 100px;
+}
+
+.hours {
+    width: 180px;
+}
+
 form {
     .form-group {
         margin-top:15px;
