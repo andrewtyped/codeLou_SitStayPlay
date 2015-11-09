@@ -5,6 +5,10 @@
     margin-bottom:40px;
     width:440px;
 
+    @include mini {
+        width:320px;
+    }
+
     @include jumbo {
         width:550px;
     }

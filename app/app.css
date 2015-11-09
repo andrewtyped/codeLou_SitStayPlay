@@ -146,6 +146,9 @@ table {
   margin-right: auto;
   margin-bottom: 40px;
   width: 440px; }
+  @media screen and (max-width: 350px) {
+    .inner-page {
+      width: 320px; } }
   @media screen and (min-width: 1400px) {
     .inner-page {
       width: 550px; } }
