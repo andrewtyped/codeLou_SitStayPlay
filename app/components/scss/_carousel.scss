@@ -4,11 +4,20 @@ $carousel-hidden-width: 140px;
 $carousel-other-width: 180px;
 $carousel-other-opacity: 0.5;
 
+$carousel-mini-current-width:140px;
+$carousel-mini-distance-between:20px;
+$carousel-mini-hidden-width: 60px;
+$carousel-mini-other-width: 100px;
+
 .carousel {
     margin-top:10px;
     overflow:hidden;
     position:relative;
-    height:720px;
+    height:440px;
+
+    @include tablet {
+        height:720px;
+    }
 }
 
 .carousel-img {
@@ -26,15 +35,26 @@ $carousel-other-opacity: 0.5;
 
 .carousel-prev, .carousel-next, .carousel-off {
     opacity:$carousel-other-opacity;
-    width:$carousel-other-width;
-    height:$carousel-other-width;
+    width:$carousel-mini-other-width;
+    height:$carousel-mini-other-width;
+
+    @include tablet {
+        width:$carousel-other-width;
+        height:$carousel-other-width;
+    }
 }
 
 .carousel-off-top {
     opacity:0;
-    top: -1*($carousel-other-width + $carousel-distance-between);
-    height: $carousel-hidden-width;
-    width: $carousel-hidden-width;
+    top: -1*($carousel-mini-other-width + $carousel-mini-distance-between);
+    height: $carousel-mini-hidden-width;
+    width: $carousel-mini-hidden-width;
+
+    @include tablet {
+        top: -1*($carousel-other-width + $carousel-distance-between);
+        height: $carousel-hidden-width;
+        width: $carousel-hidden-width;
+    }
 }
 
 .carousel-prev {
@@ -42,22 +62,40 @@ $carousel-other-opacity: 0.5;
 }
 
 .carousel-current {
-    top:$carousel-other-width + $carousel-distance-between;
-    width:$carousel-current-width;
-    height:$carousel-current-width;
+    top:$carousel-mini-other-width + $carousel-mini-distance-between;
+    width:$carousel-mini-current-width;
+    height:$carousel-mini-current-width;
+
+    @include tablet {
+        top:$carousel-other-width + $carousel-distance-between;
+        width:$carousel-current-width;
+        height:$carousel-current-width;
+    }
 }
 
 .carousel-next {
-    top:$carousel-other-width + 2 * $carousel-distance-between +
-        $carousel-current-width;
+    top:$carousel-mini-other-width + 2 * $carousel-mini-distance-between +
+        $carousel-mini-current-width;
+
+    @include tablet {
+        top:$carousel-other-width + 2 * $carousel-distance-between +
+            $carousel-current-width;
+    }
 }
 
 .carousel-off-bottom {
     opacity:0;
-    top:2*$carousel-other-width + 3 * $carousel-distance-between +
-        $carousel-current-width;
-    height: $carousel-hidden-width;
-    width:$carousel-hidden-width;
+    top:2*$carousel-mini-other-width + 3 * $carousel-mini-distance-between +
+        $carousel-mini-current-width;
+    height: $carousel-mini-hidden-width;
+    width:$carousel-mini-hidden-width;
+
+    @include tablet {
+        top:2*$carousel-other-width + 3 * $carousel-distance-between +
+            $carousel-current-width;
+        height: $carousel-hidden-width;
+        width:$carousel-hidden-width;
+    }
 }
 
 .carousel-off {
@@ -106,5 +144,34 @@ $carousel-other-opacity: 0.5;
 .carousel-img-selected {
     @include center;
     margin-top:2%;
+
+    width:300px;
+    height:auto;
+
+    @include tablet {
+        width:400px;
+        height:auto;
+    }
+
+    @include desktop {
+        width:550px;
+        height:auto;
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

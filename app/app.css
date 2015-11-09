@@ -243,7 +243,7 @@ form label {
   display: block;
   width: 100px;
   vertical-align: top; }
-  @media screen and (min-width: 751px) {
+  @media screen and (min-width: 600px) {
     form label {
       display: inline-block; } }
 form input, form textarea {
@@ -255,7 +255,7 @@ form input:not([type='submit']), form textarea {
 form input[type='submit'] {
   width: 140px;
   background-color: #d9d9d9; }
-  @media screen and (min-width: 751px) {
+  @media screen and (min-width: 600px) {
     form input[type='submit'] {
       margin-left: 100px; } }
 
@@ -263,7 +263,10 @@ form input[type='submit'] {
   margin-top: 10px;
   overflow: hidden;
   position: relative;
-  height: 720px; }
+  height: 440px; }
+  @media screen and (min-width: 600px) {
+    .carousel {
+      height: 720px; } }
 
 .carousel-img {
   position: absolute;
@@ -279,31 +282,53 @@ form input[type='submit'] {
 
 .carousel-prev, .carousel-next, .carousel-off {
   opacity: 0.5;
-  width: 180px;
-  height: 180px; }
+  width: 100px;
+  height: 100px; }
+  @media screen and (min-width: 600px) {
+    .carousel-prev, .carousel-next, .carousel-off {
+      width: 180px;
+      height: 180px; } }
 
 .carousel-off-top {
   opacity: 0;
-  top: -230px;
-  height: 140px;
-  width: 140px; }
+  top: -120px;
+  height: 60px;
+  width: 60px; }
+  @media screen and (min-width: 600px) {
+    .carousel-off-top {
+      top: -230px;
+      height: 140px;
+      width: 140px; } }
 
 .carousel-prev {
   top: 0; }
 
 .carousel-current {
-  top: 230px;
-  width: 200px;
-  height: 200px; }
+  top: 120px;
+  width: 140px;
+  height: 140px; }
+  @media screen and (min-width: 600px) {
+    .carousel-current {
+      top: 230px;
+      width: 200px;
+      height: 200px; } }
 
 .carousel-next {
-  top: 480px; }
+  top: 280px; }
+  @media screen and (min-width: 600px) {
+    .carousel-next {
+      top: 480px; } }
 
 .carousel-off-bottom {
   opacity: 0;
-  top: 710px;
-  height: 140px;
-  width: 140px; }
+  top: 400px;
+  height: 60px;
+  width: 60px; }
+  @media screen and (min-width: 600px) {
+    .carousel-off-bottom {
+      top: 710px;
+      height: 140px;
+      width: 140px; } }
 
 .carousel-off {
   display: none; }
@@ -343,7 +368,17 @@ form input[type='submit'] {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2%; }
+  margin-top: 2%;
+  width: 300px;
+  height: auto; }
+  @media screen and (min-width: 600px) {
+    .carousel-img-selected {
+      width: 400px;
+      height: auto; } }
+  @media screen and (min-width: 1024px) {
+    .carousel-img-selected {
+      width: 550px;
+      height: auto; } }
 
 * {
   box-sizing: border-box; }
@@ -364,7 +399,7 @@ h1 {
   @media screen and (max-width: 350px) {
     h1 {
       font-size: 2em; } }
-  @media screen and (min-width: 751px) {
+  @media screen and (min-width: 600px) {
     h1 {
       font-size: 3em;
       line-height: 2em; } }
@@ -380,7 +415,7 @@ h2 {
   @media screen and (max-width: 350px) {
     h2 {
       font-size: 2em; } }
-  @media screen and (min-width: 751px) {
+  @media screen and (min-width: 600px) {
     h2 {
       font-size: 2.5em;
       line-height: 1.75em; } }
@@ -398,7 +433,7 @@ h3 {
   @media screen and (max-width: 350px) {
     h3 {
       font-size: 1.5em; } }
-  @media screen and (min-width: 751px) {
+  @media screen and (min-width: 600px) {
     h3 {
       font-size: 1.75em; } }
   @media screen and (min-width: 1024px) {
@@ -576,7 +611,7 @@ p {
     min-height: 1px;
     padding: 8px 5px 0px 5px;
     width: 33.33%; }
-    @media screen and (min-width: 751px) {
+    @media screen and (min-width: 600px) {
       .footer .footer-col {
         padding: 15px 15px 0px 15px; } }
   .footer .social-media li {
