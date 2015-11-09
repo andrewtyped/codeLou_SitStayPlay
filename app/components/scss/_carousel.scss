@@ -1,0 +1,110 @@
+﻿$carousel-current-width:200px;
+$carousel-distance-between:50px;
+$carousel-hidden-width: 140px;
+$carousel-other-width: 180px;
+$carousel-other-opacity: 0.5;
+
+.carousel {
+    margin-top:10px;
+    overflow:hidden;
+    position:relative;
+    height:720px;
+}
+
+.carousel-img {
+    position: absolute;
+    margin: 0 auto;
+    left:0;
+    right:0;
+    width:200px;
+    height:200px;
+    border-radius:100px;
+    border:2px solid $bg-secondary;
+    cursor:pointer;
+    transition: width 1s, height 1s, top 1s, opacity 1s;
+}
+
+.carousel-prev, .carousel-next, .carousel-off {
+    opacity:$carousel-other-opacity;
+    width:$carousel-other-width;
+    height:$carousel-other-width;
+}
+
+.carousel-off-top {
+    opacity:0;
+    top: -1*($carousel-other-width + $carousel-distance-between);
+    height: $carousel-hidden-width;
+    width: $carousel-hidden-width;
+}
+
+.carousel-prev {
+    top:0;
+}
+
+.carousel-current {
+    top:$carousel-other-width + $carousel-distance-between;
+    width:$carousel-current-width;
+    height:$carousel-current-width;
+}
+
+.carousel-next {
+    top:$carousel-other-width + 2 * $carousel-distance-between +
+        $carousel-current-width;
+}
+
+.carousel-off-bottom {
+    opacity:0;
+    top:2*$carousel-other-width + 3 * $carousel-distance-between +
+        $carousel-current-width;
+    height: $carousel-hidden-width;
+    width:$carousel-hidden-width;
+}
+
+.carousel-off {
+    display:none;
+}
+
+.carousel-nav {
+    position: absolute;
+    margin: 0 auto;
+    bottom:0;
+    left:0;
+    right:0;
+    width: 100px;
+}
+
+.carousel-nav-btn {
+    width:40px;
+    height:40px;
+
+    -webkit-appearance:none;
+    outline:none;
+
+   background-color: $bg-primary;
+   border-radius:50%;
+   border-style:none;
+
+   &:first-child {
+       margin-right:15px;
+   }
+
+   &:hover {
+       border: 1px solid $border-primary;
+       @include box-shadow(0px 1px 2px darken($bg-primary,30%));
+   }
+
+   &:active {
+       border: 1px solid $border-primary;
+
+       background-color: darken($bg-primary, 10%);
+       @include box-shadow(inset 0px 5px 10px -5px darken($bg-primary,50%));
+       outline:none;
+   }
+
+}
+
+.carousel-img-selected {
+    @include center;
+    margin-top:2%;
+}
+
