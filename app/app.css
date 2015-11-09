@@ -564,11 +564,11 @@ p {
   .footer .footer-col {
     float: left;
     min-height: 1px;
-    padding: 15px 15px 0px 15px;
+    padding: 8px 5px 0px 5px;
     width: 33.33%; }
-    @media screen and (max-width: 350px) {
+    @media screen and (min-width: 751px) {
       .footer .footer-col {
-        padding: 8px 5px 0px 5px; } }
+        padding: 15px 15px 0px 15px; } }
   .footer .social-media li {
     display: inline-block;
     padding: 0 10px; }
