@@ -62,15 +62,25 @@ table {
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0; }
   .light-box nav {
-    padding-top: 20%; }
-    @media screen and (orientation: landscape) {
+    height: 386px;
+    left: 0;
+    top: 50%;
+    right: 0;
+    margin: -193px auto 0 auto;
+    position: absolute; }
+    @media screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
       .light-box nav {
-        padding-top: 0; } }
+        height: 282px;
+        margin: -141px auto 0 auto; } }
     .light-box nav ul {
       font-size: 2em;
       line-height: 3em;
       text-align: center;
       list-style: none; }
+      @media screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+        .light-box nav ul {
+          font-size: 1.7em;
+          line-height: 2.5em; } }
       .light-box nav ul .nav-mobile-hover {
         display: none; }
       .light-box nav ul a {

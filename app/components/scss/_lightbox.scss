@@ -10,10 +10,16 @@
     opacity:0;
 
     nav {
-        padding-top: 20%;
+        height: 386px;
+        left:0;
+        top: 50%;
+        right:0;
+        margin: -193px auto 0 auto;
+        position:absolute; 
 
-        @include landscape {
-            padding-top: 0;
+        @include mini-landscape {
+            height:282px;
+            margin: -141px auto 0 auto;
         }
 
         ul {
@@ -22,6 +28,11 @@
             text-align: center;
 
             list-style: none;
+
+            @include mini-landscape {
+                font-size: 1.7em;
+                line-height:2.5em;
+            }
 
             .nav-mobile-hover {
                 display:none;
