@@ -1,18 +1,32 @@
-﻿function lightbox(innerContent) {
-    var lightBox = document.createElement('div');
-    lightBox.classList.add('light-box');
-    lightBox.appendChild(innerContent);
-    lightBox.addEventListener('click', function() {
-        var that = this;
-        that.classList.add('fade-100-0');
-        setTimeout(function(){
-            
-            that.parentElement.removeChild(that);
-        },500);
-    });
+﻿function closeLightbox() {
+    var that = this;
+    that.classList.add('fade-100-0');
+    setTimeout(function(){
+        that.parentElement.removeChild(that);
+    },500);
+}
 
-    document.body.appendChild(lightBox);
-    lightBox.classList.add('fade-0-100');
+function lightboxClick() {
+    closeLightbox.call(this);
+}
+
+function lightboxKeyup(e) {
+    var lightbox = document.getElementById('lightbox');
+    if(lightbox && e.which === 27) {
+        closeLightbox.call(lightbox);
+    }
+}
+
+function lightbox(innerContent) {
+    var lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.classList.add('light-box');
+    lightbox.appendChild(innerContent);
+    lightbox.addEventListener('click', lightboxClick);
+    document.addEventListener('keyup', lightboxKeyup);
+
+    document.body.appendChild(lightbox);
+    lightbox.classList.add('fade-0-100');
 }
 
 var app = {};
