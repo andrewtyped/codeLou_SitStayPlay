@@ -24,7 +24,13 @@ app.lightBoxNav = function lightBoxNav() {
     app.bindRoutes(nav);
 
     lightbox(nav);
-}
+};
+
+app.desktopNavKeyup = function desktopNavKeyup(e) {
+    if(e.target.tagName === 'A' && e.which === 13) {
+        app.loadPartial(e, e.target.dataset.target);
+    }
+};
 
 app.partialEvents = {
     photos: function() {
@@ -52,7 +58,7 @@ app.loadPartial = function loadPartial(e, name) {
 
     req.open('GET','views/' + (name) + '.html');
     req.send();
-}
+};
 
 app.bindRoutes = function bindRoutes(node) {
     var partialLinks = node.getElementsByClassName('partial-link');
@@ -60,13 +66,16 @@ app.bindRoutes = function bindRoutes(node) {
     for(var i = 0; i < partialLinks.length; i++) {
         partialLinks[i].addEventListener('click', app.loadPartial);
     }
-}
+};
 
 app.bindEvents = function bindEvents() {
     var navToggle = document.getElementsByClassName('nav-toggle')[0];
     navToggle.addEventListener('click', app.lightBoxNav);
     app.bindRoutes(document);
-}
+
+    var desktopNav = document.getElementById('nav-desktop');
+    desktopNav.addEventListener('keyup', app.desktopNavKeyup);
+};
 
 app.bindEvents();
 app.loadPartial(null, 'home');
