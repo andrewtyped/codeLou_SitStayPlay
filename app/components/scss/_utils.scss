@@ -124,4 +124,20 @@
     box-shadow: #{$attrs};
 }
 
+/*For screen-reader support on icon fonts. Mimics alt text.
+  Example:
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <span class="sr-only">Twitter</span>
+*/
+ .sr-only {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     margin: -1px;
+     padding: 0;
+     overflow: hidden;
+     clip: rect(0, 0, 0, 0);
+     border: 0;
+ }
+
 /*end utilities*/
