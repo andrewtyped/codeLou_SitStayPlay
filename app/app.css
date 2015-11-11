@@ -86,9 +86,10 @@ table {
       .light-box nav ul a {
         position: relative;
         color: white; }
-        .light-box nav ul a:hover, .light-box nav ul a:active {
-          font-size: 0.95em; }
-          .light-box nav ul a:hover > .nav-mobile-hover, .light-box nav ul a:active > .nav-mobile-hover {
+        .light-box nav ul a:hover, .light-box nav ul a:active, .light-box nav ul a:focus {
+          font-size: 0.95em;
+          outline: none; }
+          .light-box nav ul a:hover > .nav-mobile-hover, .light-box nav ul a:active > .nav-mobile-hover, .light-box nav ul a:focus > .nav-mobile-hover {
             display: inline-block;
             position: absolute;
             left: -1.5em;

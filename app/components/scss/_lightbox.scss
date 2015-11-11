@@ -43,8 +43,9 @@
 
                 color: $text-secondary;
 
-                &:hover, &:active {
+                &:hover, &:active, &:focus {
                     font-size:0.95em;
+                    outline:none;
 
                     > .nav-mobile-hover {
                         display:inline-block;
