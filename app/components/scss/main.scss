@@ -51,7 +51,6 @@ h1 {
 
     @include desktop {
         font-size: 4em;
-        line-height: 2em;
     }
 }
 
@@ -133,15 +132,17 @@ p {
    .header-mobile {
        background-color: $bg-primary;
        border-bottom: 1px solid $border-primary;
+       position:relative;
 
        .nav-toggle {
            border: none;
            @include center;
            height: 2.5em;
+           margin-top: -1.25em;
 
            position:absolute;
            left:5px;
-           top:0.95em;
+           top:50%;
 
            background-color: $bg-primary;
 
@@ -164,6 +165,10 @@ p {
            @include desktop {
                display:none;
            }
+       }
+
+       #nav-mobile {
+           height:0
        }
 
        nav ul {

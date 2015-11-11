@@ -434,8 +434,7 @@ h1 {
       line-height: 2em; } }
   @media screen and (min-width: 1024px) {
     h1 {
-      font-size: 4em;
-      line-height: 2em; } }
+      font-size: 4em; } }
 
 h2 {
   font-size: 3em;
@@ -502,16 +501,18 @@ p {
   /*end sticky footer*/ }
   .page .header-mobile {
     background-color: white;
-    border-bottom: 1px solid #666666; }
+    border-bottom: 1px solid #666666;
+    position: relative; }
     .page .header-mobile .nav-toggle {
       border: none;
       display: block;
       margin-left: auto;
       margin-right: auto;
       height: 2.5em;
+      margin-top: -1.25em;
       position: absolute;
       left: 5px;
-      top: 0.95em;
+      top: 50%;
       background-color: white; }
       .page .header-mobile .nav-toggle:hover {
         border: 1px solid #666666;
@@ -530,6 +531,8 @@ p {
       @media screen and (min-width: 1024px) {
         .page .header-mobile .nav-toggle {
           display: none; } }
+    .page .header-mobile #nav-mobile {
+      height: 0; }
     .page .header-mobile nav ul {
       padding-bottom: 10px;
       font-size: 1.2em;
