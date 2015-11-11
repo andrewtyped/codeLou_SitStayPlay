@@ -352,7 +352,7 @@ form input[type='submit'] {
   border-style: none; }
   .carousel-nav-btn:first-child {
     margin-right: 15px; }
-  .carousel-nav-btn:hover {
+  .carousel-nav-btn:hover, .carousel-nav-btn:focus {
     border: 1px solid #666666;
     -webkit-box-shadow: 0px 1px 2px #b3b3b3;
     -moz-box-shadow: 0px 1px 2px #b3b3b3;
