@@ -396,6 +396,19 @@ form input[type='submit'] {
       width: 550px;
       height: auto; } }
 
+.foster-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 50%; }
+  @media screen and (max-width: 350px) {
+    .foster-img {
+      height: 250px;
+      width: 250px; } }
+
 * {
   box-sizing: border-box; }
 

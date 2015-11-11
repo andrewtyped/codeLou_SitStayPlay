@@ -1,0 +1,12 @@
+﻿.foster-img {
+    @include center;
+    height: 400px;
+    width:400px;
+    border: 2px solid $bg-secondary;
+    border-radius:50%;
+
+    @include mini {
+        height:250px;
+        width:250px;
+    }
+}
