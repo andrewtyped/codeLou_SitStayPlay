@@ -493,16 +493,16 @@ p {
   margin: 20px 0;
   padding: 0 20px; }
 
-.page {
+.site {
   /*sticky footer*/
   min-height: 100%;
   margin-bottom: -50px;
   /*end sticky footer*/ }
-  .page .header-mobile {
+  .site .header-mobile {
     background-color: white;
     border-bottom: 1px solid #666666;
     position: relative; }
-    .page .header-mobile .nav-toggle {
+    .site .header-mobile .nav-toggle {
       border: none;
       display: block;
       margin-left: auto;
@@ -513,13 +513,13 @@ p {
       left: 5px;
       top: 50%;
       background-color: white; }
-      .page .header-mobile .nav-toggle:hover {
+      .site .header-mobile .nav-toggle:hover {
         border: 1px solid #666666;
         border-radius: 4px;
         -webkit-box-shadow: 0px 1px 2px #b3b3b3;
         -moz-box-shadow: 0px 1px 2px #b3b3b3;
         box-shadow: 0px 1px 2px #b3b3b3; }
-      .page .header-mobile .nav-toggle:active, .page .header-mobile .nav-toggle:focus {
+      .site .header-mobile .nav-toggle:active, .site .header-mobile .nav-toggle:focus {
         border: 1px solid #666666;
         border-radius: 4px;
         background-color: #e6e6e6;
@@ -528,43 +528,43 @@ p {
         box-shadow: inset 0px 5px 10px -5px gray;
         outline: none; }
       @media screen and (min-width: 1024px) {
-        .page .header-mobile .nav-toggle {
+        .site .header-mobile .nav-toggle {
           display: none; } }
-    .page .header-mobile #nav-mobile {
+    .site .header-mobile #nav-mobile {
       height: 0; }
-    .page .header-mobile nav ul {
+    .site .header-mobile nav ul {
       padding-bottom: 10px;
       font-size: 1.2em;
       line-height: 1.2em;
       text-align: center;
       list-style: none; }
-      .page .header-mobile nav ul li {
+      .site .header-mobile nav ul li {
         display: none; }
     @media screen and (min-width: 1024px) {
-      .page .header-mobile {
+      .site .header-mobile {
         display: none; } }
-  .page .header-desktop {
+  .site .header-desktop {
     display: none; }
     @media screen and (min-width: 1024px) {
-      .page .header-desktop {
+      .site .header-desktop {
         display: block;
         float: left;
         min-height: 530px;
         width: 530px;
         font-size: 1.6em; } }
   @media screen and (min-width: 1024px) and (min-width: 1400px) {
-    .page .header-desktop {
+    .site .header-desktop {
       min-height: 630px;
       width: 630px; } }
     @media screen and (min-width: 1024px) {
-        .page .header-desktop img {
+        .site .header-desktop img {
           margin-left: 30px;
           margin-top: 30px; } }
     @media screen and (min-width: 1024px) and (min-width: 1400px) {
-      .page .header-desktop img {
+      .site .header-desktop img {
         width: 600px; } }
     @media screen and (min-width: 1024px) {
-        .page .header-desktop #nav-desktop .header-group {
+        .site .header-desktop #nav-desktop .header-group {
           position: absolute;
           left: 80px;
           top: 130px;
@@ -573,69 +573,69 @@ p {
           text-shadow: 0px 4px 4px #333333;
           color: white; } }
     @media screen and (min-width: 1024px) and (min-width: 1400px) {
-      .page .header-desktop #nav-desktop .header-group {
+      .site .header-desktop #nav-desktop .header-group {
         top: 145px;
         font-size: 2.7em; } }
     @media screen and (min-width: 1024px) {
-          .page .header-desktop #nav-desktop .header-group a:focus, .page .header-desktop #nav-desktop .header-group a:hover {
+          .site .header-desktop #nav-desktop .header-group a:focus, .site .header-desktop #nav-desktop .header-group a:hover {
             color: #b3b3b3;
             text-shadow: 0px 3px 3px #1a1a1a;
             outline: none; }
-        .page .header-desktop #nav-desktop ul > li {
+        .site .header-desktop #nav-desktop ul > li {
           position: absolute;
           z-index: 2; } }
     @media screen and (min-width: 1024px) and (min-width: 1400px) {
-      .page .header-desktop #nav-desktop ul > li {
+      .site .header-desktop #nav-desktop ul > li {
         font-size: 1.3em; } }
     @media screen and (min-width: 1024px) {
-          .page .header-desktop #nav-desktop ul > li a {
+          .site .header-desktop #nav-desktop ul > li a {
             text-shadow: 0px 4px 4px #333333;
             color: white; }
-            .page .header-desktop #nav-desktop ul > li a .nav-mobile-hover {
+            .site .header-desktop #nav-desktop ul > li a .nav-mobile-hover {
               display: none; }
-            .page .header-desktop #nav-desktop ul > li a:focus, .page .header-desktop #nav-desktop ul > li a:hover {
+            .site .header-desktop #nav-desktop ul > li a:focus, .site .header-desktop #nav-desktop ul > li a:hover {
               color: #b3b3b3;
               text-shadow: 0px 3px 3px #1a1a1a;
               outline: none; }
-        .page .header-desktop #nav-desktop ul > li:first-child {
+        .site .header-desktop #nav-desktop ul > li:first-child {
           left: 250px;
           top: 75px; } }
     @media screen and (min-width: 1024px) and (min-width: 1400px) {
-      .page .header-desktop #nav-desktop ul > li:first-child {
+      .site .header-desktop #nav-desktop ul > li:first-child {
         left: 300px;
         top: 75px; } }
     @media screen and (min-width: 1024px) {
-        .page .header-desktop #nav-desktop ul > li:nth-child(2) {
+        .site .header-desktop #nav-desktop ul > li:nth-child(2) {
           left: 360px;
           top: 195px; } }
     @media screen and (min-width: 1024px) and (min-width: 1400px) {
-      .page .header-desktop #nav-desktop ul > li:nth-child(2) {
+      .site .header-desktop #nav-desktop ul > li:nth-child(2) {
         left: 450px;
         top: 230px; } }
     @media screen and (min-width: 1024px) {
-        .page .header-desktop #nav-desktop ul > li:nth-child(3) {
+        .site .header-desktop #nav-desktop ul > li:nth-child(3) {
           left: 350px;
           top: 325px; } }
     @media screen and (min-width: 1024px) and (min-width: 1400px) {
-      .page .header-desktop #nav-desktop ul > li:nth-child(3) {
+      .site .header-desktop #nav-desktop ul > li:nth-child(3) {
         left: 430px;
         top: 390px; } }
     @media screen and (min-width: 1024px) {
-        .page .header-desktop #nav-desktop ul > li:last-child {
+        .site .header-desktop #nav-desktop ul > li:last-child {
           left: 180px;
           top: 425px; } }
     @media screen and (min-width: 1024px) and (min-width: 1400px) {
-      .page .header-desktop #nav-desktop ul > li:last-child {
+      .site .header-desktop #nav-desktop ul > li:last-child {
         left: 215px;
         top: 520px; } }
 
   @media screen and (min-width: 1024px) {
-    .page .content {
+    .site .content {
       margin-left: 540px; } }
   @media screen and (min-width: 1400px) {
-    .page .content {
+    .site .content {
       margin-left: 640px; } }
-  .page::after {
+  .site::after {
     content: "";
     clear: both;
     display: block;
