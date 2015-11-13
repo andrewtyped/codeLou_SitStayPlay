@@ -38,10 +38,16 @@
                 display:none;
             }
 
-            a {
+            .partial-link {
                 position:relative;
 
+                background:transparent;
+                border:none;
                 color: $text-secondary;
+                font:inherit;
+                font-size:inherit;
+                outline:none;
+                overflow:visible;
 
                 &:hover, &:active, &:focus {
                     font-size:0.95em;

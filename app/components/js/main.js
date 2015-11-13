@@ -38,21 +38,21 @@ function lightbox(innerContent) {
 
 var app = {};
 
-app.lightboxNavCtrlLoop = function lightboxNavCtrlLoop(e) {
-    if(e.which === 9) {
+app.focusFirstLink = function focusFirstLink(e) {
+    if(e.which === 9 && !e.shiftKey) {
         setTimeout(function() {
-            document.querySelector('#lightBoxNav li:nth-child(1)>a').focus();
+            document.querySelector('#lightBoxNav li:first-child>.partial-link').focus();
         },50);
     }
 }
 
-app.lightboxNavKeyup = function lightboxNavKeyup(e) {
-    if(e.target.tagName === 'A' && e.which === 13) {
-        app.loadPartial(e, e.target.dataset.target);
-        closeLightbox();
+app.focusLastLink = function focusLastLink(e) {
+    if(e.which === 9 && e.shiftKey) {
+        setTimeout(function() {
+            document.querySelector('#lightBoxNav li:last-child>.partial-link').focus();
+        },50);
     }
 }
-
 app.lightBoxNav = function lightBoxNav() {
     var navId = this.dataset.target;
     var nav = document.querySelector(navId).cloneNode(true);
@@ -60,19 +60,12 @@ app.lightBoxNav = function lightBoxNav() {
     app.bindRoutes(nav);
 
     lightbox(nav);
-    nav.querySelector('li:first-child>a').focus();
-    nav.querySelector('li:last-child>a').addEventListener('keydown', 
-            app.lightboxNavCtrlLoop);
 
-    setTimeout(function() {
-        nav.addEventListener('keyup', app.lightboxNavKeyup)
-    }, 100);
-};
-
-app.navKeyup = function navKeyup(e) {
-    if(e.target.tagName === 'A' && e.which === 13) {
-        app.loadPartial(e, e.target.dataset.target);
-    }
+    var firstNavLink = nav.querySelector('li:first-child>.partial-link');
+    firstNavLink.focus();
+    firstNavLink.addEventListener('keydown', app.focusLastLink);
+    nav.querySelector('li:last-child>.partial-link').addEventListener('keydown', 
+            app.focusFirstLink);
 };
 
 app.partialEvents = {
@@ -115,9 +108,6 @@ app.bindEvents = function bindEvents() {
     var navToggle = document.getElementsByClassName('nav-toggle')[0];
     navToggle.addEventListener('click', app.lightBoxNav);
     app.bindRoutes(document);
-
-    var desktopNav = document.getElementById('nav-desktop');
-    desktopNav.addEventListener('keyup', app.navKeyup);
 };
 
 app.bindEvents();

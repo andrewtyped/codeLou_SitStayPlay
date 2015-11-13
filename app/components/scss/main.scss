@@ -128,6 +128,20 @@ p {
 
 .site {
 
+    .partial-link {
+        border: none;
+        padding:0;
+        -webkit-appearance: none;
+        background: transparent;
+        font:inherit;
+        font-size:inherit;
+
+        color:inherit;
+        outline:0;
+        text-align:left;
+        text-shadow: inherit;
+    }
+
    .header-mobile {
        background-color: $bg-primary;
        border-bottom: 1px solid $border-primary;
@@ -241,29 +255,30 @@ p {
                }
            }
 
+           #nav-desktop button {
+                text-shadow: 0px 4px 4px darken($bg-primary,80%);
+
+                color:$text-secondary;
+
+                .nav-mobile-hover {
+                   display: none;
+                }
+
+                &:focus, &:hover {
+                   color:darken($text-secondary,30%);
+                   text-shadow: 0px 3px 3px darken($bg-primary,90%);
+                   outline:none;
+                }
+           }
+
            #nav-desktop ul {
+
                &>li {
                    position:absolute;
                    z-index:2;
 
                    @include jumbo {
                        font-size:1.3em;
-                   }
-
-                   a {
-                       text-shadow: 0px 4px 4px darken($bg-primary,80%);
-
-                       color:$text-secondary;
-
-                       .nav-mobile-hover {
-                           display: none;
-                       }
-
-                       &:focus, &:hover {
-                           color:darken($text-secondary,30%);
-                           text-shadow: 0px 3px 3px darken($bg-primary,90%);
-                           outline:none;
-                       }
                    }
                }
 
