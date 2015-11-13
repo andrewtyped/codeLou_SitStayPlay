@@ -10,10 +10,10 @@ $carousel-mini-hidden-width: 60px;
 $carousel-mini-other-width: 100px;
 
 .carousel {
+    height:440px;
     margin-top:10px;
     overflow:hidden;
     position:relative;
-    height:440px;
 
     @include tablet {
         height:720px;
@@ -21,16 +21,16 @@ $carousel-mini-other-width: 100px;
 }
 
 .carousel-img {
-    position: absolute;
-    margin: 0 auto;
-    left:0;
-    right:0;
-    width:200px;
-    height:200px;
     border-radius:100px;
     border:2px solid $bg-secondary;
     cursor:pointer;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    position: absolute;
     transition: width 1s, height 1s, top 1s, opacity 1s;
+    width:200px;
+    height:200px;
 }
 
 .carousel-prev, .carousel-next, .carousel-off {
@@ -47,13 +47,13 @@ $carousel-mini-other-width: 100px;
 .carousel-off-top {
     opacity:0;
     top: -1*($carousel-mini-other-width + $carousel-mini-distance-between);
-    height: $carousel-mini-hidden-width;
     width: $carousel-mini-hidden-width;
+    height: $carousel-mini-hidden-width;
 
     @include tablet {
         top: -1*($carousel-other-width + $carousel-distance-between);
-        height: $carousel-hidden-width;
         width: $carousel-hidden-width;
+        height: $carousel-hidden-width;
     }
 }
 
@@ -87,14 +87,14 @@ $carousel-mini-other-width: 100px;
     opacity:0;
     top:2*$carousel-mini-other-width + 3 * $carousel-mini-distance-between +
         $carousel-mini-current-width;
-    height: $carousel-mini-hidden-width;
     width:$carousel-mini-hidden-width;
+    height: $carousel-mini-hidden-width;
 
     @include tablet {
         top:2*$carousel-other-width + 3 * $carousel-distance-between +
             $carousel-current-width;
-        height: $carousel-hidden-width;
         width:$carousel-hidden-width;
+        height: $carousel-hidden-width;
     }
 }
 
@@ -103,24 +103,24 @@ $carousel-mini-other-width: 100px;
 }
 
 .carousel-nav {
-    position: absolute;
     margin: 0 auto;
+    position: absolute;
+    right:0;
     bottom:0;
     left:0;
-    right:0;
     width: 100px;
 }
 
 .carousel-nav-btn {
+    -webkit-appearance:none;
+    background-color: $bg-primary;
+    border-radius:50%;
+    border-style:none;
+    outline:none;
     width:40px;
     height:40px;
 
-    -webkit-appearance:none;
-    outline:none;
 
-   background-color: $bg-primary;
-   border-radius:50%;
-   border-style:none;
 
    &:first-child {
        margin-right:15px;
@@ -132,21 +132,21 @@ $carousel-mini-other-width: 100px;
    }
 
    &:active {
-       border: 1px solid $border-primary;
-
        background-color: darken($bg-primary, 10%);
-       @include box-shadow(inset 0px 5px 10px -5px darken($bg-primary,50%));
+       border: 1px solid $border-primary;
        outline:none;
+
+       @include box-shadow(inset 0px 5px 10px -5px darken($bg-primary,50%));
    }
 
 }
 
 .carousel-img-selected {
-    @include center;
     margin-top:2%;
-
     width:300px;
     height:auto;
+
+    @include center;
 
     @include tablet {
         width:400px;
@@ -157,8 +157,6 @@ $carousel-mini-other-width: 100px;
         width:550px;
         height:auto;
     }
-
-
 }
 
 

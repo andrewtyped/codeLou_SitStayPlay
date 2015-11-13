@@ -241,25 +241,25 @@ form input[type='submit'] {
       margin-left: 100px; } }
 
 .carousel {
+  height: 440px;
   margin-top: 10px;
   overflow: hidden;
-  position: relative;
-  height: 440px; }
+  position: relative; }
   @media screen and (min-width: 600px) {
     .carousel {
       height: 720px; } }
 
 .carousel-img {
-  position: absolute;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
   border-radius: 100px;
   border: 2px solid black;
   cursor: pointer;
-  transition: width 1s, height 1s, top 1s, opacity 1s; }
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  transition: width 1s, height 1s, top 1s, opacity 1s;
+  width: 200px;
+  height: 200px; }
 
 .carousel-prev, .carousel-next, .carousel-off {
   opacity: 0.5;
@@ -273,13 +273,13 @@ form input[type='submit'] {
 .carousel-off-top {
   opacity: 0;
   top: -120px;
-  height: 60px;
-  width: 60px; }
+  width: 60px;
+  height: 60px; }
   @media screen and (min-width: 600px) {
     .carousel-off-top {
       top: -230px;
-      height: 140px;
-      width: 140px; } }
+      width: 140px;
+      height: 140px; } }
 
 .carousel-prev {
   top: 0; }
@@ -303,33 +303,33 @@ form input[type='submit'] {
 .carousel-off-bottom {
   opacity: 0;
   top: 400px;
-  height: 60px;
-  width: 60px; }
+  width: 60px;
+  height: 60px; }
   @media screen and (min-width: 600px) {
     .carousel-off-bottom {
       top: 710px;
-      height: 140px;
-      width: 140px; } }
+      width: 140px;
+      height: 140px; } }
 
 .carousel-off {
   display: none; }
 
 .carousel-nav {
-  position: absolute;
   margin: 0 auto;
+  position: absolute;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
   width: 100px; }
 
 .carousel-nav-btn {
-  width: 40px;
-  height: 40px;
   -webkit-appearance: none;
-  outline: none;
   background-color: white;
   border-radius: 50%;
-  border-style: none; }
+  border-style: none;
+  outline: none;
+  width: 40px;
+  height: 40px; }
   .carousel-nav-btn:first-child {
     margin-right: 15px; }
   .carousel-nav-btn:hover, .carousel-nav-btn:focus {
@@ -338,20 +338,20 @@ form input[type='submit'] {
     -moz-box-shadow: 0px 1px 2px #b3b3b3;
     box-shadow: 0px 1px 2px #b3b3b3; }
   .carousel-nav-btn:active {
-    border: 1px solid #666666;
     background-color: #e6e6e6;
+    border: 1px solid #666666;
+    outline: none;
     -webkit-box-shadow: inset 0px 5px 10px -5px gray;
     -moz-box-shadow: inset 0px 5px 10px -5px gray;
-    box-shadow: inset 0px 5px 10px -5px gray;
-    outline: none; }
+    box-shadow: inset 0px 5px 10px -5px gray; }
 
 .carousel-img-selected {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 2%;
   width: 300px;
-  height: auto; }
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
   @media screen and (min-width: 600px) {
     .carousel-img-selected {
       width: 400px;
