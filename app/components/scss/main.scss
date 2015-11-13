@@ -35,7 +35,7 @@ h1, h2 {
     color:$text-primary;
 }
 
-h1 {
+h1, .header-mobile>.partial-link.site-header {
     font-size:2.5em;
     line-height:1.5em;
     text-align: center;
@@ -126,21 +126,37 @@ p {
     padding: 0 20px;
 }
 
-.site {
+.partial-link {
+    border: none;
+    padding:0;
+    -webkit-appearance: none;
+    background: transparent;
+    font:inherit;
+    font-size:inherit;
 
-    .partial-link {
-        border: none;
-        padding:0;
-        -webkit-appearance: none;
-        background: transparent;
-        font:inherit;
-        font-size:inherit;
+    color:$text-secondary;
+    cursor:pointer;
+    outline:0;
+    text-align:left;
+    text-shadow: 0px 4px 4px darken($bg-primary,80%);
 
-        color:inherit;
-        outline:0;
-        text-align:left;
-        text-shadow: inherit;
+    &:focus, &:hover {
+       color:darken($text-secondary,30%);
+       text-shadow: 0px 3px 3px darken($bg-primary,90%);
+       outline:0;
     }
+
+    &::-moz-focus-inner {
+        border:0;
+    }
+
+    .nav-mobile-hover {
+       display: none;
+    }
+
+}
+
+.site {
 
    .header-mobile {
        background-color: $bg-primary;
@@ -177,6 +193,17 @@ p {
 
            @include desktop {
                display:none;
+           }
+       }
+
+       &>.partial-link.site-header {
+           color:$text-primary;
+           text-shadow:0 0 0 black;
+           @include center;
+
+           &:focus, &:hover {
+               color:$text-primary;
+               text-shadow:0 0 0 black;
            }
        }
 
@@ -253,22 +280,6 @@ p {
                    text-shadow: 0px 3px 3px darken($bg-primary,90%);
                    outline:none;
                }
-           }
-
-           #nav-desktop button {
-                text-shadow: 0px 4px 4px darken($bg-primary,80%);
-
-                color:$text-secondary;
-
-                .nav-mobile-hover {
-                   display: none;
-                }
-
-                &:focus, &:hover {
-                   color:darken($text-secondary,30%);
-                   text-shadow: 0px 3px 3px darken($bg-primary,90%);
-                   outline:none;
-                }
            }
 
            #nav-desktop ul {

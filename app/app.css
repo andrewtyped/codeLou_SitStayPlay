@@ -427,18 +427,18 @@ body {
 h1, h2 {
   color: black; }
 
-h1 {
+h1, .header-mobile > .partial-link.site-header {
   font-size: 2.5em;
   line-height: 1.5em;
   text-align: center; }
   @media screen and (max-width: 350px) {
-    h1 {
+    h1, .header-mobile > .partial-link.site-header {
       font-size: 2em; } }
   @media screen and (min-width: 600px) {
-    h1 {
+    h1, .header-mobile > .partial-link.site-header {
       line-height: 2em; } }
   @media screen and (min-width: 1024px) {
-    h1 {
+    h1, .header-mobile > .partial-link.site-header {
       font-size: 3.5em; } }
 
 h2 {
@@ -499,22 +499,32 @@ p {
   margin: 20px 0;
   padding: 0 20px; }
 
+.partial-link {
+  border: none;
+  padding: 0;
+  -webkit-appearance: none;
+  background: transparent;
+  font: inherit;
+  font-size: inherit;
+  color: white;
+  cursor: pointer;
+  outline: 0;
+  text-align: left;
+  text-shadow: 0px 4px 4px #333333; }
+  .partial-link:focus, .partial-link:hover {
+    color: #b3b3b3;
+    text-shadow: 0px 3px 3px #1a1a1a;
+    outline: 0; }
+  .partial-link::-moz-focus-inner {
+    border: 0; }
+  .partial-link .nav-mobile-hover {
+    display: none; }
+
 .site {
   /*sticky footer*/
   min-height: 100%;
   margin-bottom: -50px;
   /*end sticky footer*/ }
-  .site .partial-link {
-    border: none;
-    padding: 0;
-    -webkit-appearance: none;
-    background: transparent;
-    font: inherit;
-    font-size: inherit;
-    color: inherit;
-    outline: 0;
-    text-align: left;
-    text-shadow: inherit; }
   .site .header-mobile {
     background-color: white;
     border-bottom: 1px solid #666666;
@@ -547,6 +557,15 @@ p {
       @media screen and (min-width: 1024px) {
         .site .header-mobile .nav-toggle {
           display: none; } }
+    .site .header-mobile > .partial-link.site-header {
+      color: black;
+      text-shadow: 0 0 0 black;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+      .site .header-mobile > .partial-link.site-header:focus, .site .header-mobile > .partial-link.site-header:hover {
+        color: black;
+        text-shadow: 0 0 0 black; }
     .site .header-mobile #nav-mobile {
       height: 0; }
     .site .header-mobile nav ul {
@@ -595,15 +614,6 @@ p {
         font-size: 2.7em; } }
     @media screen and (min-width: 1024px) {
           .site .header-desktop #nav-desktop .header-group a:focus, .site .header-desktop #nav-desktop .header-group a:hover {
-            color: #b3b3b3;
-            text-shadow: 0px 3px 3px #1a1a1a;
-            outline: none; }
-        .site .header-desktop #nav-desktop button {
-          text-shadow: 0px 4px 4px #333333;
-          color: white; }
-          .site .header-desktop #nav-desktop button .nav-mobile-hover {
-            display: none; }
-          .site .header-desktop #nav-desktop button:focus, .site .header-desktop #nav-desktop button:hover {
             color: #b3b3b3;
             text-shadow: 0px 3px 3px #1a1a1a;
             outline: none; }
