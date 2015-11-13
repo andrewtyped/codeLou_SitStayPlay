@@ -11,17 +11,18 @@
 @import '_foster';
 
 //Conventions
-//  Grouping
-//    Box model
-//    Position
-//    Typography
-//    Other
-//  Order
-//    Alphabetical
+//- Mixins are included after other rules
+//- CSS rules are ordered alphabetically, with two exceptions:
+//    - width and height are grouped together
+//    - top, right, bottom, left styled are grouped in that order
 
 * {
     box-sizing: border-box;
 }
+
+
+/*SITE WIDE STYLES
+=======================*/
 
 html, body {
     height: 100%;
@@ -31,7 +32,7 @@ body {
     @include font-lato-norm;
 }
 
-h1, h2 {
+button, div, h1, h2, h3, h4, h5, h6, input, p, span {
     color:$text-primary;
 }
 
@@ -74,12 +75,11 @@ h2 {
 }
 
 h3 {
+    font-size:1.75em;
+    font-weight:300;
     margin-top:15px;
     margin-bottom:20px;
     padding-left:5px;
-    font-size:1.75em;
-    font-weight:300;
-
 
     @include mini {
         font-size: 1.5em;
@@ -95,17 +95,16 @@ h3 {
 }
 
 h4 {
-    margin-bottom:10px;
-    padding-left: 10px;
     font-size: 1.3em;
     font-weight:300;
+    margin-bottom:10px;
+    padding-left: 10px;
 }
 
 a {
-    text-decoration: none;
-
     color: inherit;
     cursor:pointer;
+    text-decoration: none;
 }
 
 input, label, textarea, p {
@@ -126,226 +125,7 @@ p {
     padding: 0 20px;
 }
 
-.partial-link {
-    border: none;
-    padding:0;
-    -webkit-appearance: none;
-    background: transparent;
-    font:inherit;
-    font-size:inherit;
-
-    color:$text-secondary;
-    cursor:pointer;
-    outline:0;
-    text-align:left;
-    text-shadow: 0px 4px 4px darken($bg-primary,80%);
-
-    &:focus, &:hover {
-       color:darken($text-secondary,30%);
-       text-shadow: 0px 3px 3px darken($bg-primary,90%);
-       outline:0;
-    }
-
-    &::-moz-focus-inner {
-        border:0;
-    }
-
-    .nav-mobile-hover {
-       display: none;
-    }
-
-}
-
 .site {
-
-   .header-mobile {
-       background-color: $bg-primary;
-       border-bottom: 1px solid $border-primary;
-       position:relative;
-
-       .nav-toggle {
-           border: none;
-           @include center;
-           height: 2.5em;
-           margin-top: -1.25em;
-
-           position:absolute;
-           left:5px;
-           top:50%;
-
-           background-color: $bg-primary;
-
-           &:hover {
-               border: 1px solid $border-primary;
-               border-radius: 4px;
-
-               @include box-shadow(0px 1px 2px darken($bg-primary,30%));
-           }
-
-           &:active, &:focus {
-               border: 1px solid $border-primary;
-               border-radius: 4px;
-
-               background-color: darken($bg-primary, 10%);
-               @include box-shadow(inset 0px 5px 10px -5px darken($bg-primary,50%));
-               outline:none;
-           }
-
-           @include desktop {
-               display:none;
-           }
-       }
-
-       &>.partial-link.site-header {
-           color:$text-primary;
-           text-shadow:0 0 0 black;
-           @include center;
-
-           &:focus, &:hover {
-               color:$text-primary;
-               text-shadow:0 0 0 black;
-           }
-       }
-
-       #nav-mobile {
-           height:0
-       }
-
-       nav ul {
-           padding-bottom:10px;
-
-           font-size:1.2em;
-           line-height:1.2em;
-           text-align:center;
-
-           list-style:none;
-
-           li {
-               display:none;
-           }
-       }
-
-       @include desktop {
-           display:none;
-       }
-   }
-
-   .header-desktop { 
-
-       display: none;
-
-       @include desktop {
-
-           display: block;
-           float:left;
-           min-height:$desktop-nav-width + $pawprint-top;
-           width:$desktop-nav-width + $pawprint-left;
-
-           @include jumbo {
-               min-height: $jumbo-nav-width + $pawprint-top;
-               width: $jumbo-nav-width + $pawprint-top;
-           }
-
-           font-size:1.6em;
-
-           img {
-               margin-left: $pawprint-left;
-               margin-top:$pawprint-top;
-
-               @include jumbo {
-                   width: $jumbo-nav-width;
-               }
-           }
-
-
-           #nav-desktop .header-group {
-               position: absolute;
-               left: 80px;
-               top: 130px;
-
-               font-size: 2em;
-               line-height: 1.5em;
-               text-shadow: 0px 4px 4px darken($bg-primary,80%);
-
-               color: $text-secondary;
-
-               @include jumbo {
-                   top:145px;
-
-                   font-size: 2.7em;
-               }
-
-               a:focus, a:hover {
-                   color:darken($text-secondary, 30%);
-                   text-shadow: 0px 3px 3px darken($bg-primary,90%);
-                   outline:none;
-               }
-           }
-
-           #nav-desktop ul {
-
-               &>li {
-                   position:absolute;
-                   z-index:2;
-
-                   @include jumbo {
-                       font-size:1.3em;
-                   }
-               }
-
-               &>li:first-child {
-                   left:220px + $pawprint-left;
-                   top: 45px + $pawprint-top;
-
-                   @include jumbo {
-                       left:270px + $pawprint-left;
-                       top: 45px + $pawprint-top;
-                   }
-               }
-
-               &>li:nth-child(2) {
-                   left:330px + $pawprint-left;
-                   top: 165px + $pawprint-top;
-
-                   @include jumbo {
-                       left:420px + $pawprint-left;
-                       top: 200px + $pawprint-top;
-                   }
-               }
-
-               &>li:nth-child(3) {
-                   left:320px + $pawprint-left;
-                   top: 295px + $pawprint-top;
-
-                   @include jumbo {
-                       left:400px + $pawprint-left;
-                       top: 360px + $pawprint-top;
-                   }
-               }
-
-               &>li:last-child {
-                   left:150px + $pawprint-left;
-                   top: 395px + $pawprint-top;
-
-                   @include jumbo {
-                       left:185px + $pawprint-left;
-                       top: 490px + $pawprint-top;
-                   }
-               }
-           }
-       }
-   }
-
-    .content {
-
-        @include desktop {
-            margin-left: $desktop-nav-width + $pawprint-left + 10px;
-        }
-
-        @include jumbo {
-            margin-left: $jumbo-nav-width + $pawprint-left + 10px;
-        }
-    }
     
     /*sticky footer*/
     min-height:100%;
@@ -360,35 +140,293 @@ p {
     /*end sticky footer*/
 }
 
-.footer {
-    height:$footer-height;
-    border-top: 1px solid $border-primary; 
+.partial-link {
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+    color:$text-secondary;
+    cursor:pointer;
+    font:inherit;
+    font-size:1.6rem;
+    outline:0;
+    padding:0;
+    text-align:left;
+    text-shadow: 0px 4px 4px darken($bg-primary,80%);
 
-    background-color: darken($bg-primary, 15%);
-    
-    .footer-col {
-        float:left;
-        min-height:1px;
-        padding: 8px 5px 0px 5px;
-        width: 33.33%;
-
-        @include tablet {
-            padding: 15px 15px 0px 15px;
-        }
+    &:focus, &:hover {
+       color:darken($text-secondary,30%);
+       outline:0;
+       text-shadow: 0px 3px 3px darken($bg-primary,90%);
     }
 
-    .social-media {
-        
-        li {
-            display: inline-block;
-            padding: 0 10px;
-        }
+    &::-moz-focus-inner {
+        border:0;
     }
 
-    .credit, .quick-contact {
-        font-size: 0.75em;
-        text-align:center;
+    @include jumbo {
+        font-size:2rem;
+    }
+
+}
+
+.site-header {
+    font-size:3rem;
+    line-height:1.5em;
+    text-align: left;
+
+    @include jumbo {
+        font-size:4rem;
+    }
+}
+
+/*MOBILE HEADER
+====================*/
+
+.header-mobile {
+   background-color: $bg-primary;
+   border-bottom: 1px solid $border-primary;
+   position:relative;
+
+   &>.partial-link.site-header {
+       color:$text-primary;
+       text-shadow:0 0 0 black;
+       @include center;
+   }
+
+   @include desktop {
+       display:none;
+   }
+}
+
+.nav-toggle {
+   background-color: $bg-primary;
+   border: none; 
+   height: 2.5em;
+   margin-top: -1.25em;
+   position:absolute;
+   top:50%;
+   left:5px;
+
+   @include center;
+
+   &:hover {
+       border: 1px solid $border-primary;
+       border-radius: 4px;
+
+       @include box-shadow(0px 1px 2px darken($bg-primary,30%));
+   }
+
+   &:active, &:focus {
+       background-color: darken($bg-primary, 10%);
+       border: 1px solid $border-primary;
+       border-radius: 4px;
+       outline:none;
+
+       @include box-shadow(inset 0px 5px 10px -5px darken($bg-primary,50%));
+   }
+
+   @include desktop {
+       display:none;
+   }
+}
+
+#nav-mobile {
+    height: 0;
+}
+
+.light-box nav {
+    height: 386px;
+    left:0;
+    top: 50%;
+    right:0;
+    margin: -193px auto 0 auto;
+    position:absolute; 
+
+    @include mini-landscape {
+        height:282px;
+        margin: -141px auto 0 auto;
+    }
+} 
+
+.nav-mobile-list {
+    display:none;
+}
+
+.light-box .nav-mobile-list {
+    display:block;
+    font-size: 2em;
+    line-height:3em;
+    text-align: center;
+
+    list-style: none;
+
+    @include mini-landscape {
+        font-size: 1.7em;
+        line-height:2.5em;
+    }
+
+    .nav-mobile-hover {
+        display:none;
+    }
+
+    .partial-link {
+        font-size:2rem;
+        overflow:visible;
+        position:relative;
+
+        &:hover, &:active, &:focus {
+            font-size:0.95em;
+            outline:none;
+
+            > .nav-mobile-hover {
+                color: $text-secondary;
+                display:inline-block;
+                font-size:0.85em;
+                left: -1.5em;
+                line-height:inherit;
+                position:absolute;
+            }
+        }
+    }
+}
+
+/*DESKTOP HEADER
+=======================*/
+.header-desktop{ 
+   display: none;
+
+   @include desktop {
+       display: block;
+       float:left;
+       font-size:1.6em;
+       min-height:$desktop-nav-width + $pawprint-top;
+       width:$desktop-nav-width + $pawprint-left;
+
+       @include jumbo {
+           min-height: $jumbo-nav-width + $pawprint-top;
+           width: $jumbo-nav-width + $pawprint-top;
+       }
+   }
+}
+
+.lg-nav-img {
+   margin-top:$pawprint-top;
+   margin-left: $pawprint-left;
+
+   @include jumbo {
+       width: $jumbo-nav-width;
+   }
+}
+
+#nav-desktop .header-group {
+   color: $text-secondary;
+   font-size: 2em;
+   line-height: 1.5em;
+   position: absolute;
+   text-shadow: 0px 4px 4px darken($bg-primary,80%);
+   top: 130px;
+   left: 80px;
+
+   @include jumbo {
+       font-size: 2.7em;
+       top:145px;
+   }
+}
+
+#nav-desktop ul {
+
+   &>li {
+       position:absolute;
+       z-index:2;
+   }
+
+   &>li:first-child {
+       top: 45px + $pawprint-top;
+       left:220px + $pawprint-left;
+
+       @include jumbo {
+           top: 45px + $pawprint-top;
+           left:270px + $pawprint-left;
+       }
+   }
+
+   &>li:nth-child(2) {
+       top: 165px + $pawprint-top;
+       left:330px + $pawprint-left;
+
+       @include jumbo {
+           top: 200px + $pawprint-top;
+           left:420px + $pawprint-left;
+       }
+   }
+
+   &>li:nth-child(3) {
+       top: 295px + $pawprint-top;
+       left:320px + $pawprint-left;
+
+       @include jumbo {
+           top: 360px + $pawprint-top;
+           left:400px + $pawprint-left;
+       }
+   }
+
+   &>li:last-child {
+       top: 395px + $pawprint-top;
+       left:150px + $pawprint-left;
+
+       @include jumbo {
+           top: 490px + $pawprint-top;
+           left:185px + $pawprint-left;
+       }
+   }
+}
+
+
+/*CONTENT PANEL
+====================================*/
+
+.content {
+
+    @include desktop {
+        margin-left: $desktop-nav-width + $pawprint-left + 10px;
+    }
+
+    @include jumbo {
+        margin-left: $jumbo-nav-width + $pawprint-left + 10px;
     }
 }
 
 
+/*FOOTER
+=========================================*/
+
+.footer {
+    background-color: darken($bg-primary, 15%); 
+    border-top: 1px solid $border-primary; 
+    height:$footer-height;
+
+}
+
+.footer-col {
+    float:left;
+    min-height:1px;
+    padding: 8px 5px 0px 5px;
+    width: 33.33%;
+
+    @include tablet {
+        padding: 15px 15px 0px 15px;
+    }
+}
+
+.social-media {
+    
+    li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+}
+
+.credit, .quick-contact {
+    font-size: 0.75em;
+    text-align:center;
+}

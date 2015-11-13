@@ -19,6 +19,7 @@
                 <button type="button" 
                         class="nav-toggle" 
                         data-target="#nav-mobile">
+
                         <i class="fa fa-navicon fa-lg" aria-hidden="true"></i>
                         <span class="sr-only">Mobile Navigation</span>
                 </button>
@@ -28,7 +29,7 @@
                 </button>
 
                 <nav id="nav-mobile">
-                    <ul>
+                    <ul class="nav-mobile-list">
                         <li>
                             <button type="button" class="partial-link" data-target="services"
                                 tabindex="2">
@@ -67,17 +68,17 @@
             <div class="header-desktop">
                 <nav id="nav-desktop">
                     <div class="header-group">
-                        <button type="button" class="partial-link" data-target="home" tabindex="1">
+                        <button type="button" class="partial-link site-header" data-target="home" tabindex="1">
                             Sit, <br>
                             Stay & <br>
                             Play!
                         </button>
                     </div>
-                    <ul>
+
+                    <ul class="nav-desktop-list">
                         <li>
                             <button type="button" class="partial-link" data-target="services"
                                 tabindex="2">
-                                <i class="fa fa-paw nav-mobile-hover" aria-hidden="true"></i>
                                 Services
                             </button>
                         </li>
@@ -85,7 +86,6 @@
                         <li>
                             <button type="button" class="partial-link" data-target="contact"
                                 tabindex="3">
-                                <i class="fa fa-paw nav-mobile-hover" aria-hidden="true"></i>
                                 Contact
                             </button>
                         </li>
@@ -93,7 +93,6 @@
                         <li>
                             <button type="button" class="partial-link" data-target="photos"
                                 tabindex="4">
-                                <i class="fa fa-paw nav-mobile-hover" aria-hidden="true"></i>
                                 Photos
                             </button>
                         </li>
@@ -101,7 +100,6 @@
                         <li>
                             <button type="button" class="partial-link" data-target="foster"
                                 tabindex="5">
-                                <i class="fa fa-paw nav-mobile-hover" aria-hidden="true"></i>
                                 Foster Program
                             </button>
                         </li>
@@ -109,7 +107,7 @@
                 </nav>
 
                 <!--Intentionally empty alt text. Image is decorative.-->
-                <img src="components/img/dogs-in-print.png" alt=""/>
+                <img class="lg-nav-img" src="components/img/dogs-in-print.png" alt=""/>
             </div>
 
             <div id="content" class="content">
