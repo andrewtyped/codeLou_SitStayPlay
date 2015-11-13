@@ -505,25 +505,51 @@ p {
 ====================*/
 .header-mobile {
   background-color: white;
-  border-bottom: 1px solid #666666;
+  background-image: url("components/img/dogs-in-print.png");
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, transparent 90%, transparent 100%), url("components/img/dogs-in-print.png");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, transparent 90%, transparent 100%), url("components/img/dogs-in-print.png");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 90%, transparent 100%), url("components/img/dogs-in-print.png");
+  background-origin: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+  margin-bottom: 10px;
   position: relative; }
+  @media screen and (max-width: 350px) {
+    .header-mobile {
+      height: 200px; } }
   .header-mobile > .partial-link.site-header {
-    color: black;
-    text-shadow: 0 0 0 black;
+    color: white;
+    font-size: 2.5rem;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0px 4px 4px #333333;
+    top: 25%;
+    left: 0;
+    right: 0;
+    width: 320px;
     display: block;
     margin-left: auto;
     margin-right: auto; }
+    @media screen and (min-width: 600px) {
+      .header-mobile > .partial-link.site-header {
+        font-size: 5rem;
+        width: 550px;
+        top: 0; } }
   @media screen and (min-width: 1024px) {
     .header-mobile {
       display: none; } }
 
 .nav-toggle {
-  background-color: white;
+  background-color: transparent;
   border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 300;
   height: 2.5em;
-  margin-top: -1.25em;
   position: absolute;
-  top: 50%;
+  top: 5px;
   left: 5px;
   display: block;
   margin-left: auto;
@@ -531,17 +557,17 @@ p {
   .nav-toggle:hover {
     border: 1px solid #666666;
     border-radius: 4px;
-    -webkit-box-shadow: 0px 1px 2px #b3b3b3;
-    -moz-box-shadow: 0px 1px 2px #b3b3b3;
-    box-shadow: 0px 1px 2px #b3b3b3; }
+    -webkit-box-shadow: 0px 1px 2px #666666;
+    -moz-box-shadow: 0px 1px 2px #666666;
+    box-shadow: 0px 1px 2px #666666; }
   .nav-toggle:active, .nav-toggle:focus {
-    background-color: #e6e6e6;
+    background-color: #999999;
     border: 1px solid #666666;
     border-radius: 4px;
     outline: none;
-    -webkit-box-shadow: inset 0px 5px 10px -5px gray;
-    -moz-box-shadow: inset 0px 5px 10px -5px gray;
-    box-shadow: inset 0px 5px 10px -5px gray; }
+    -webkit-box-shadow: inset 0px 5px 10px -5px #4d4d4d;
+    -moz-box-shadow: inset 0px 5px 10px -5px #4d4d4d;
+    box-shadow: inset 0px 5px 10px -5px #4d4d4d; }
   @media screen and (min-width: 1024px) {
     .nav-toggle {
       display: none; } }
