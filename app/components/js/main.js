@@ -19,6 +19,14 @@ function lightboxKeyup(e) {
         if(e.which === 27) {
             closeLightbox();
         }
+        else if(e.which === 9) {
+            var focusedLink = document.querySelector('#lightBoxNav .partial-link:focus');
+
+            if(!focusedLink) {
+                document.querySelector('#lightBoxNav li:first-child>.partial-link')
+                    .focus();
+            }
+        }
     }
 }
 
@@ -61,9 +69,7 @@ app.lightBoxNav = function lightBoxNav() {
 
     lightbox(nav);
 
-    var firstNavLink = nav.querySelector('li:first-child>.partial-link');
-    firstNavLink.focus();
-    firstNavLink.addEventListener('keydown', app.focusLastLink);
+    nav.querySelector('li:first-child>.partial-link').addEventListener('keydown', app.focusLastLink);
     nav.querySelector('li:last-child>.partial-link').addEventListener('keydown', 
             app.focusFirstLink);
 };
@@ -81,11 +87,18 @@ app.loadPartial = function loadPartial(e, name) {
     req.onreadystatechange = function() {
         if (req.readyState === 4 && req.status === 200) {
             var content = document.getElementById('content');
-            content.innerHTML = req.responseText;
+            content.classList.add('fade-100-0');
+            
+            setTimeout(function(){
+                content.innerHTML = req.responseText;
+                content.classList.add('fade-0-100');
+                content.classList.remove('fade-100-0');
 
-            if(app.partialEvents[name]) {
-                app.partialEvents[name]();
-            }
+                if(app.partialEvents[name]) {
+                    app.partialEvents[name]();
+                }
+            }, 750);
+
         }
         else if (req.readyState === 4) {
             alert('failed');
