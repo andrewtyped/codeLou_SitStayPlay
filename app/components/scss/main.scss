@@ -153,7 +153,7 @@ p {
     text-shadow: 0px 4px 4px darken($bg-primary,80%);
 
     &:focus, &:hover {
-       color:darken($text-secondary,30%);
+       color:$accent;
        outline:0;
        text-shadow: 0px 3px 3px darken($bg-primary,90%);
     }
@@ -184,16 +184,16 @@ p {
 .header-mobile {
    background-color:$bg-primary;
    background-image:url('components/img/dogs-in-print.png');
-   background-image: -moz-linear-gradient(top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0)
-            90%, rgba(0,0,0,0) 100%), /* FF3.6-15 */
+   background-image: -moz-linear-gradient(top, transparentize($accent,0.5) 0%, rgba(0,0,0,0)
+            60%, rgba(0,0,0,0) 100%), /* FF3.6-15 */
              url('components/img/dogs-in-print.png');
 
-   background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0)
-             90%,rgba(0,0,0,0) 100%), /* Chrome10-25,Safari5.1-6 */
+   background-image: -webkit-linear-gradient(top, transparentize($accent,0.5) 0%,rgba(0,0,0,0)
+             60%,rgba(0,0,0,0) 100%), /* Chrome10-25,Safari5.1-6 */
              url('components/img/dogs-in-print.png');
 
-   background-image: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0)
-        90%,rgba(0,0,0,0) 100%),
+   background-image: linear-gradient(to bottom, transparentize($accent,0.5) 0%,rgba(0,0,0,0)
+        60%,rgba(0,0,0,0) 100%),
             /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         url('components/img/dogs-in-print.png');
 
@@ -257,7 +257,7 @@ p {
    }
 
    &:active, &:focus {
-       background-color: darken($bg-primary, 40%);
+       background-color: lighten($accent, 20%);
        border: 1px solid $border-primary;
        border-radius: 4px;
        outline:none;
@@ -441,7 +441,7 @@ p {
 =========================================*/
 
 .footer {
-    background-color: darken($bg-primary, 15%); 
+    background-color: lighten($accent,10%); 
     border-top: 1px solid $border-primary; 
     height:$footer-height;
 

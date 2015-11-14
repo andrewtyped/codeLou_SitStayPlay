@@ -1,6 +1,9 @@
-﻿$bg-primary: white;
+﻿$gray-blue: #80AACC;
+
+$accent: $gray-blue;
+$bg-primary: white;
 $bg-secondary: black;
-$text-primary: black;
+$text-primary: #333;
 $text-secondary: white;
 $border-primary: lighten($bg-secondary, 40%);
 $footer-height:50px;
