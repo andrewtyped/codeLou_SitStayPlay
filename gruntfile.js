@@ -31,9 +31,12 @@
         },
         sass : {
             build : {
-                files : {
-                    'app/app.css' : 'app/components/scss/main.scss'
-                }
+				options: {
+					style: 'compressed'
+				},
+				files : {
+					'app/app.css' : 'app/components/scss/main.scss'
+				}
             },
             dev : {
                 files : {
