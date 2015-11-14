@@ -3,11 +3,11 @@
     @include center;
 
     margin-bottom:40px;
-    width:440px;
+    width:85%;
 
-    @include mini {
-        width:320px;
-    }
+     @include tablet {
+         width:450px;
+     }
 
     @include jumbo {
         width:550px;
@@ -33,7 +33,11 @@ section:not(:first-child) {
     font-size: 1.1em;
     letter-spacing:0.03em;
     line-height:1.5em;
-    text-align:justify;
+    text-align:left;
+
+    @include tablet {
+        text-align: justify;
+    }
 }
 
 .inner-page-list {
