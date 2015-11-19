@@ -368,14 +368,18 @@ form input[type='submit'] {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 400px;
-  width: 400px;
+  height: auto;
+  width: 85%;
   border: 2px solid black;
   border-radius: 50%; }
   @media screen and (max-width: 350px) {
     .foster-img {
       height: 250px;
       width: 250px; } }
+  @media screen and (min-width: 600px) {
+    .foster-img {
+      width: 400px;
+      height: 400px; } }
 
 * {
   box-sizing: border-box; }
